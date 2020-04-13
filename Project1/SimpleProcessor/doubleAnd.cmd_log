@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym doubleAnd {/home/ise/Documents/Project 1/SimpleProcessor/doubleAnd.sch} {/home/ise/Documents/Project 1/SimpleProcessor/doubleAnd.sym} 

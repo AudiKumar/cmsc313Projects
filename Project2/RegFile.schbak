@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drawing version="7">
+    <attr value="spartan6" name="DeviceFamilyName">
+        <trait delete="all:0" />
+        <trait editname="all:0" />
+        <trait edittrait="all:0" />
+    </attr>
+    <netlist>
+        <signal name="R_addr_a(1:0)" />
+        <signal name="R_addr_b(1:0)" />
+        <signal name="W_data(7:0)" />
+        <signal name="W_addr(1:0)" />
+        <signal name="W_enable" />
+        <signal name="clk" />
+        <signal name="R_data_a(7:0)" />
+        <signal name="R_data_b(7:0)" />
+        <port polarity="Input" name="R_addr_a(1:0)" />
+        <port polarity="Input" name="R_addr_b(1:0)" />
+        <port polarity="Input" name="W_data(7:0)" />
+        <port polarity="Input" name="W_addr(1:0)" />
+        <port polarity="Input" name="W_enable" />
+        <port polarity="Input" name="clk" />
+        <port polarity="Output" name="R_data_a(7:0)" />
+        <port polarity="Output" name="R_data_b(7:0)" />
+        <blockdef name="decoderWrite8Bit">
+            <timestamp>2020-4-2T16:22:9</timestamp>
+            <rect width="256" x="64" y="-256" height="256" />
+            <rect width="64" x="0" y="-236" height="24" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-224" y2="-224" x1="320" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+        </blockdef>
+        <blockdef name="register8Bit">
+            <timestamp>2020-4-2T16:22:20</timestamp>
+            <rect width="256" x="64" y="-192" height="192" />
+            <rect width="64" x="0" y="-172" height="24" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="320" y="-172" height="24" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+        </blockdef>
+        <block symbolname="decoderWrite8Bit" name="XLXI_1">
+            <blockpin name="a(1:0)" />
+            <blockpin name="b" />
+            <blockpin name="d0" />
+            <blockpin name="d1" />
+            <blockpin name="d2" />
+            <blockpin name="d3" />
+        </block>
+        <block symbolname="register8Bit" name="XLXI_2">
+            <blockpin name="a(7:0)" />
+            <blockpin name="enable" />
+            <blockpin name="clock" />
+            <blockpin name="q(7:0)" />
+        </block>
+        <block symbolname="register8Bit" name="XLXI_3">
+            <blockpin name="a(7:0)" />
+            <blockpin name="enable" />
+            <blockpin name="clock" />
+            <blockpin name="q(7:0)" />
+        </block>
+        <block symbolname="register8Bit" name="XLXI_4">
+            <blockpin name="a(7:0)" />
+            <blockpin name="enable" />
+            <blockpin name="clock" />
+            <blockpin name="q(7:0)" />
+        </block>
+        <block symbolname="register8Bit" name="XLXI_5">
+            <blockpin name="a(7:0)" />
+            <blockpin name="enable" />
+            <blockpin name="clock" />
+            <blockpin name="q(7:0)" />
+        </block>
+    </netlist>
+    <sheet sheetnum="1" width="3520" height="2720">
+        <branch name="R_addr_a(1:0)">
+            <wire x2="480" y1="640" y2="640" x1="320" />
+        </branch>
+        <iomarker fontsize="28" x="320" y="640" name="R_addr_a(1:0)" orien="R180" />
+        <branch name="R_addr_b(1:0)">
+            <wire x2="480" y1="880" y2="880" x1="320" />
+        </branch>
+        <iomarker fontsize="28" x="320" y="880" name="R_addr_b(1:0)" orien="R180" />
+        <branch name="W_data(7:0)">
+            <wire x2="480" y1="1120" y2="1120" x1="320" />
+        </branch>
+        <iomarker fontsize="28" x="320" y="1120" name="W_data(7:0)" orien="R180" />
+        <branch name="W_addr(1:0)">
+            <wire x2="480" y1="1360" y2="1360" x1="320" />
+        </branch>
+        <branch name="W_enable">
+            <wire x2="480" y1="1600" y2="1600" x1="320" />
+        </branch>
+        <iomarker fontsize="28" x="320" y="1600" name="W_enable" orien="R180" />
+        <branch name="clk">
+            <wire x2="480" y1="1840" y2="1840" x1="320" />
+        </branch>
+        <iomarker fontsize="28" x="320" y="1840" name="clk" orien="R180" />
+        <branch name="R_data_a(7:0)">
+            <wire x2="3200" y1="640" y2="640" x1="3040" />
+        </branch>
+        <iomarker fontsize="28" x="3200" y="640" name="R_data_a(7:0)" orien="R0" />
+        <branch name="R_data_b(7:0)">
+            <wire x2="3200" y1="1120" y2="1120" x1="3040" />
+        </branch>
+        <iomarker fontsize="28" x="3200" y="1120" name="R_data_b(7:0)" orien="R0" />
+        <iomarker fontsize="28" x="320" y="1360" name="W_addr(1:0)" orien="R180" />
+        <instance x="1696" y="688" name="XLXI_2" orien="R0">
+        </instance>
+        <instance x="1664" y="976" name="XLXI_3" orien="R0">
+        </instance>
+        <instance x="1664" y="1248" name="XLXI_4" orien="R0">
+        </instance>
+        <instance x="1680" y="1568" name="XLXI_5" orien="R0">
+        </instance>
+        <instance x="1008" y="1168" name="XLXI_1" orien="R0">
+        </instance>
+    </sheet>
+</drawing>

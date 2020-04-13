@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym shift {/home/ise/Projects/Project 2/shift.sch} {/home/ise/Projects/Project 2/shift.sym} 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl shift_drc.vhf -w {/home/ise/Projects/Project 2/shift.sch} 

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="GeneralPurposeProcessor.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ALU.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="ALU.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="ALU_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Bitwise_And.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Bitwise_And.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="ControlALU.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="GPP.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="GPP.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="GPP.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="GPP.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="GPP.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="GPP.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="GPP.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="GPP.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="GPP.syr"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="GPP.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="GPP.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="GPPTestCircuit_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="GPP_GPP_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="GPP_GPP_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="GPP_GPP_sch_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="GPP_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="GPP_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Instruction_Decoder.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Instruction_Decoder.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Instruction_ROM.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="RegFile.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="RegParallelLoad_1.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="RegParallelLoad_4.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="adder8Bit.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="adder8Bit.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="decoderWrite8Bit.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="decoderWrite8Bit.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="eight_bit_Xor.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="eight_bit_Xor.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="eight_bit_multiplier.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="eight_bit_multiplier.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="eight_bit_or.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="eight_bit_or.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="fullSubtractor.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="fullSubtractor.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="full_adder.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="full_adder.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="halfSubtractor.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="halfSubtractor.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="half_adder.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="half_adder.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="multiplexer.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="multiplexer.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="readPortMux.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="readPortMux.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="register8Bit.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="register8Bit.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="shift.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="shift.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="subtractor8Bit.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="subtractor8Bit.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1586105596" xil_pn:in_ck="-8509432462343440806" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1586105566">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU_tb.vhd"/>
+      <outfile xil_pn:name="Adder_4.vhd"/>
+      <outfile xil_pn:name="EqualityComp_8.vhd"/>
+      <outfile xil_pn:name="GPP_tb.vhd"/>
+      <outfile xil_pn:name="Mux16_4.vhd"/>
+      <outfile xil_pn:name="Mux16_9.vhd"/>
+      <outfile xil_pn:name="Mux2_4.vhd"/>
+      <outfile xil_pn:name="Mux2_8.vhd"/>
+      <outfile xil_pn:name="RegFile_tb.vhd"/>
+      <outfile xil_pn:name="RegParallelLoad_4.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105596" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1293401393048644350" xil_pn:start_ts="1586105596">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105599" xil_pn:in_ck="-7532735260713360206" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6799021167130563200" xil_pn:start_ts="1586105596">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU.vhf"/>
+      <outfile xil_pn:name="Bitwise_And.vhf"/>
+      <outfile xil_pn:name="ControlALU.vhf"/>
+      <outfile xil_pn:name="GPP.vhf"/>
+      <outfile xil_pn:name="Instruction_Decoder.vhf"/>
+      <outfile xil_pn:name="Instruction_ROM.vhf"/>
+      <outfile xil_pn:name="RegFile.vhf"/>
+      <outfile xil_pn:name="RegParallelLoad_1.vhf"/>
+      <outfile xil_pn:name="adder8Bit.vhf"/>
+      <outfile xil_pn:name="decoderWrite8Bit.vhf"/>
+      <outfile xil_pn:name="eight_bit_Xor.vhf"/>
+      <outfile xil_pn:name="eight_bit_multiplier.vhf"/>
+      <outfile xil_pn:name="eight_bit_or.vhf"/>
+      <outfile xil_pn:name="fullSubtractor.vhf"/>
+      <outfile xil_pn:name="full_adder.vhf"/>
+      <outfile xil_pn:name="halfSubtractor.vhf"/>
+      <outfile xil_pn:name="half_adder.vhf"/>
+      <outfile xil_pn:name="multiplexer.vhf"/>
+      <outfile xil_pn:name="readPortMux.vhf"/>
+      <outfile xil_pn:name="register8Bit.vhf"/>
+      <outfile xil_pn:name="shift.vhf"/>
+      <outfile xil_pn:name="subtractor8Bit.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105599" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-178789039760557470" xil_pn:start_ts="1586105599">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105599" xil_pn:in_ck="8148158998259178864" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1586105599">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU.vhf"/>
+      <outfile xil_pn:name="ALU_tb.vhd"/>
+      <outfile xil_pn:name="Adder_4.vhd"/>
+      <outfile xil_pn:name="Bitwise_And.vhf"/>
+      <outfile xil_pn:name="ControlALU.vhf"/>
+      <outfile xil_pn:name="EqualityComp_8.vhd"/>
+      <outfile xil_pn:name="GPP.vhf"/>
+      <outfile xil_pn:name="GPP_tb.vhd"/>
+      <outfile xil_pn:name="Instruction_Decoder.vhf"/>
+      <outfile xil_pn:name="Instruction_ROM.vhf"/>
+      <outfile xil_pn:name="Mux16_4.vhd"/>
+      <outfile xil_pn:name="Mux16_9.vhd"/>
+      <outfile xil_pn:name="Mux2_4.vhd"/>
+      <outfile xil_pn:name="Mux2_8.vhd"/>
+      <outfile xil_pn:name="RegFile.vhf"/>
+      <outfile xil_pn:name="RegFile_tb.vhd"/>
+      <outfile xil_pn:name="RegParallelLoad_1.vhf"/>
+      <outfile xil_pn:name="RegParallelLoad_4.vhd"/>
+      <outfile xil_pn:name="adder8Bit.vhf"/>
+      <outfile xil_pn:name="decoderWrite8Bit.vhf"/>
+      <outfile xil_pn:name="eight_bit_Xor.vhf"/>
+      <outfile xil_pn:name="eight_bit_multiplier.vhf"/>
+      <outfile xil_pn:name="eight_bit_or.vhf"/>
+      <outfile xil_pn:name="fullSubtractor.vhf"/>
+      <outfile xil_pn:name="full_adder.vhf"/>
+      <outfile xil_pn:name="halfSubtractor.vhf"/>
+      <outfile xil_pn:name="half_adder.vhf"/>
+      <outfile xil_pn:name="multiplexer.vhf"/>
+      <outfile xil_pn:name="readPortMux.vhf"/>
+      <outfile xil_pn:name="register8Bit.vhf"/>
+      <outfile xil_pn:name="shift.vhf"/>
+      <outfile xil_pn:name="subtractor8Bit.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105608" xil_pn:in_ck="8148158998259178864" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2432594435407813687" xil_pn:start_ts="1586105599">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="GPP_GPP_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="GPP_GPP_sch_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105609" xil_pn:in_ck="-1131477689364302002" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5531828214640923780" xil_pn:start_ts="1586105608">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="GPP_GPP_sch_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105491" xil_pn:in_ck="-7532735260713360206" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3601665654846694606" xil_pn:start_ts="1586105483">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="ALU.vhf"/>
+      <outfile xil_pn:name="Bitwise_And.vhf"/>
+      <outfile xil_pn:name="ControlALU.vhf"/>
+      <outfile xil_pn:name="GPP.vhf"/>
+      <outfile xil_pn:name="Instruction_Decoder.vhf"/>
+      <outfile xil_pn:name="Instruction_ROM.vhf"/>
+      <outfile xil_pn:name="RegFile.vhf"/>
+      <outfile xil_pn:name="RegParallelLoad_1.vhf"/>
+      <outfile xil_pn:name="adder8Bit.vhf"/>
+      <outfile xil_pn:name="decoderWrite8Bit.vhf"/>
+      <outfile xil_pn:name="eight_bit_Xor.vhf"/>
+      <outfile xil_pn:name="eight_bit_multiplier.vhf"/>
+      <outfile xil_pn:name="eight_bit_or.vhf"/>
+      <outfile xil_pn:name="fullSubtractor.vhf"/>
+      <outfile xil_pn:name="full_adder.vhf"/>
+      <outfile xil_pn:name="halfSubtractor.vhf"/>
+      <outfile xil_pn:name="half_adder.vhf"/>
+      <outfile xil_pn:name="multiplexer.vhf"/>
+      <outfile xil_pn:name="readPortMux.vhf"/>
+      <outfile xil_pn:name="register8Bit.vhf"/>
+      <outfile xil_pn:name="shift.vhf"/>
+      <outfile xil_pn:name="subtractor8Bit.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105491" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-178789039760557470" xil_pn:start_ts="1586105491">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105491" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1586105491">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105491" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7168043577402153780" xil_pn:start_ts="1586105491">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105491" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="250970745955965653" xil_pn:start_ts="1586105491">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105491" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="5553787003424355372" xil_pn:start_ts="1586105491">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1586105504" xil_pn:in_ck="-7116437175975240486" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="8871065277794457915" xil_pn:start_ts="1586105491">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="GPP.jhd"/>
+      <outfile xil_pn:name="GPP.lso"/>
+      <outfile xil_pn:name="GPP.ngc"/>
+      <outfile xil_pn:name="GPP.ngr"/>
+      <outfile xil_pn:name="GPP.prj"/>
+      <outfile xil_pn:name="GPP.stx"/>
+      <outfile xil_pn:name="GPP.syr"/>
+      <outfile xil_pn:name="GPP.xst"/>
+      <outfile xil_pn:name="GPP_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+  </transforms>
+
+</generated_project>

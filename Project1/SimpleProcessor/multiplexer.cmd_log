@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer /home/ise/Desktop/SimpleProcessor/multiplexer.sch /home/ise/Desktop/SimpleProcessor/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer {/home/ise/Documents/Project 1/SimpleProcessor/multiplexer.sch} {/home/ise/Documents/Project 1/SimpleProcessor/multiplexer.sym} 

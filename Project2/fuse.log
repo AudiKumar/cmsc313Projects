@@ -1,0 +1,93 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/ise/Projects/Project 2/GPP_GPP_sch_tb_isim_beh.exe -prj /home/ise/Projects/Project 2/GPP_GPP_sch_tb_beh.prj work.GPP_GPP_sch_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/Projects/Project 2/half_adder.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/halfSubtractor.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/full_adder.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/fullSubtractor.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/subtractor8Bit.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/shift.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/register8Bit.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/readPortMux.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/Mux2_4.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/Mux16_9.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/Mux16_4.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/multiplexer.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/EqualityComp_8.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/eight_bit_Xor.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/eight_bit_or.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/eight_bit_multiplier.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/decoderWrite8Bit.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/Bitwise_And.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/Adder_4.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/adder8Bit.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/RegParallelLoad_4.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/RegParallelLoad_1.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/RegFile.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/Mux2_8.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/Instruction_ROM.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/Instruction_Decoder.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/ControlALU.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/ALU.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/GPP.vhf" into library work
+Parsing VHDL file "/home/ise/Projects/Project 2/GPP_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 116080 KB
+Fuse CPU Usage: 2240 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture behavioral of entity Mux16_4 [\Mux16_4(4)\]
+Compiling architecture behavioral of entity Adder_4 [\Adder_4(4)\]
+Compiling architecture behavioral of entity Mux2_4 [\Mux2_4(4)\]
+Compiling architecture behavioral of entity ControlALU_MUSER_GPP [controlalu_muser_gpp_default]
+Compiling architecture fde_v of entity FDE [\FDE('0')\]
+Compiling architecture behavioral of entity RegParallelLoad_1_MUSER_GPP [regparallelload_1_muser_gpp_defa...]
+Compiling architecture behavioral of entity EqualityComp_8 [\EqualityComp_8(8)\]
+Compiling architecture buf_v of entity BUF [buf_default]
+Compiling architecture m8_1e_hxilinx_gpp_v of entity M8_1E_HXILINX_GPP [m8_1e_hxilinx_gpp_default]
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture xor2_v of entity XOR2 [xor2_default]
+Compiling architecture and2_v of entity AND2 [and2_default]
+Compiling architecture behavioral of entity half_adder_MUSER_GPP [half_adder_muser_gpp_default]
+Compiling architecture xor3_v of entity XOR3 [xor3_default]
+Compiling architecture or3_v of entity OR3 [or3_default]
+Compiling architecture behavioral of entity full_adder_MUSER_GPP [full_adder_muser_gpp_default]
+Compiling architecture behavioral of entity adder8Bit_MUSER_GPP [adder8bit_muser_gpp_default]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture behavioral of entity halfSubtractor_MUSER_GPP [halfsubtractor_muser_gpp_default]
+Compiling architecture or2_v of entity OR2 [or2_default]
+Compiling architecture behavioral of entity fullSubtractor_MUSER_GPP [fullsubtractor_muser_gpp_default]
+Compiling architecture behavioral of entity subtractor8Bit_MUSER_GPP [subtractor8bit_muser_gpp_default]
+Compiling architecture behavioral of entity multiplexer_MUSER_GPP [multiplexer_muser_gpp_default]
+Compiling architecture behavioral of entity Bitwise_And_MUSER_GPP [bitwise_and_muser_gpp_default]
+Compiling architecture behavioral of entity shift_MUSER_GPP [shift_muser_gpp_default]
+Compiling architecture behavioral of entity eight_bit_Xor_MUSER_GPP [eight_bit_xor_muser_gpp_default]
+Compiling architecture behavioral of entity eight_bit_or_MUSER_GPP [eight_bit_or_muser_gpp_default]
+Compiling architecture or8_hxilinx_gpp_v of entity OR8_HXILINX_GPP [or8_hxilinx_gpp_default]
+Compiling architecture behavioral of entity eight_bit_multiplier_MUSER_GPP [eight_bit_multiplier_muser_gpp_d...]
+Compiling architecture behavioral of entity ALU_MUSER_GPP [alu_muser_gpp_default]
+Compiling architecture behavioral of entity Mux2_8 [\Mux2_8(8)\]
+Compiling architecture behavioral of entity Mux16_9 [\Mux16_9(9)\]
+Compiling architecture behavioral of entity Instruction_ROM_MUSER_GPP [instruction_rom_muser_gpp_defaul...]
+Compiling architecture behavioral of entity Instruction_Decoder_MUSER_GPP [instruction_decoder_muser_gpp_de...]
+Compiling architecture behavioral of entity RegParallelLoad_4 [\RegParallelLoad_4(4)\]
+Compiling architecture d2_4e_hxilinx_gpp_v of entity D2_4E_HXILINX_GPP [d2_4e_hxilinx_gpp_default]
+Compiling architecture behavioral of entity decoderWrite8Bit_MUSER_GPP [decoderwrite8bit_muser_gpp_defau...]
+Compiling architecture behavioral of entity register8Bit_MUSER_GPP [register8bit_muser_gpp_default]
+Compiling architecture m4_1e_hxilinx_gpp_v of entity M4_1E_HXILINX_GPP [m4_1e_hxilinx_gpp_default]
+Compiling architecture behavioral of entity readPortMux_MUSER_GPP [readportmux_muser_gpp_default]
+Compiling architecture behavioral of entity RegFile_MUSER_GPP [regfile_muser_gpp_default]
+Compiling architecture behavioral of entity GPP [gpp_default]
+Compiling architecture behavioral of entity gpp_gpp_sch_tb
+Time Resolution for simulation is 1ps.
+Compiled 91 VHDL Units
+Built simulation executable /home/ise/Projects/Project 2/GPP_GPP_sch_tb_isim_beh.exe
+Fuse Memory Usage: 133644 KB
+Fuse CPU Usage: 2740 ms
+GCC CPU Usage: 3520 ms

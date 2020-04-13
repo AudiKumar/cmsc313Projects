@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym eight_bit_adder /home/ise/Desktop/SimpleProcessor/eight_bit_adder.sch /home/ise/Desktop/SimpleProcessor/eight_bit_adder.sym 

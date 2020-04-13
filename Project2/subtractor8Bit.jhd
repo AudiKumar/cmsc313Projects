@@ -1,0 +1,17 @@
+MODULE subtractor8Bit
+	SUBMODULE halfSubtractor
+		INSTANCE XLXI_1
+	SUBMODULE fullSubtractor
+		INSTANCE XLXI_2
+	SUBMODULE fullSubtractor
+		INSTANCE XLXI_3
+	SUBMODULE fullSubtractor
+		INSTANCE XLXI_4
+	SUBMODULE fullSubtractor
+		INSTANCE XLXI_5
+	SUBMODULE fullSubtractor
+		INSTANCE XLXI_6
+	SUBMODULE fullSubtractor
+		INSTANCE XLXI_7
+	SUBMODULE fullSubtractor
+		INSTANCE XLXI_8

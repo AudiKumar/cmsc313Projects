@@ -1,0 +1,7 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym GPP {/home/ise/Projects/Project 2/GPP.sch} {/home/ise/Projects/Project 2/GPP.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym GPP {/home/ise/Projects/Project 2/GPP.sch} {/home/ise/Projects/Project 2/GPP.sym} 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl GPP_drc.vhf -w {/home/ise/Projects/Project 2/GPP.sch} 
+sch2sym -intstyle ise -family spartan6 -w -refsym GPP {/home/ise/Projects/Project 2/GPP.sch} {/home/ise/Projects/Project 2/GPP.sym} 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl GPP_drc.vhf -w {/home/ise/Projects/Project 2/GPP.sch} 
+sch2sym -intstyle ise -family spartan6 -w -refsym GPP {/home/ise/Projects/Project 2/GPP.sch} {/home/ise/Projects/Project 2/GPP.sym} 
+xst -intstyle ise -ifn "/home/ise/Projects/Project 2/GPP.xst" -ofn "/home/ise/Projects/Project 2/GPP.syr" 

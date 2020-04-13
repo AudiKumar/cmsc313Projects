@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym subtractor /home/adi6/Documents/XilinxProjects/Project1/Project1_v1/SimpleProcessor/subtractor.sch /home/adi6/Documents/XilinxProjects/Project1/Project1_v1/SimpleProcessor/subtractor.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym subtractor /home/adi6/Documents/XilinxProjects/Project1/Project1_v1/SimpleProcessor/subtractor.sch /home/adi6/Documents/XilinxProjects/Project1/Project1_v1/SimpleProcessor/subtractor.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym subtractor /home/ise/Desktop/SimpleProcessor/subtractor.sch /home/ise/Desktop/SimpleProcessor/subtractor.sym 

@@ -1,0 +1,50 @@
+select figure at 2770 2194 8 -branches -sn=1
+name net at 2768 2192 8 a(3) -sn=1
+add autowire 2496 2336 3072 2288 8 -sn=1
+select figure at 2677 2332 8 -branches -sn=1
+move wire at 2496 2336 2784 2336 to 2496 2288 2784 2288 -keepConn -sn=1
+add autowire 3456 2016 3072 2352 8 -sn=1
+select figure at 1855 2926 8 -branches -sn=1
+move instance at 1712 3024 to 1696 3040 R0 -keepConn -sn=1
+add instance full_adder 3088 2688 R0 -sn=1
+select figure at 3310 2592 8 -branches -sn=1
+move instance at 3088 2688 to 3072 2720 R0 -keepConn -sn=1
+add autowire 3456 2352 3072 2688 8 -sn=1
+select figure at 3007 2512 8 -branches -sn=1
+move wire at 3008 2448 3008 2688 to 3056 2448 3056 2688 -keepConn -sn=1
+select figure at 3394 2609 8 -branches -sn=1
+select figure at 3631 2618 8 -branches -sn=1
+add autowire 2496 2672 3072 2624 8 -sn=1
+select figure at 2787 2662 8 -branches -sn=1
+move wire at 2784 2624 2784 2672 to 2544 2624 2544 2672 -keepConn -sn=1
+add instance and2 2688 2624 R0 -sn=1
+add autowire 3072 2560 2944 2528 8 -sn=1
+select figure at 2836 2526 8 -branches -sn=1
+move instance at 2688 2624 to 2688 2656 R0 -keepConn -sn=1
+move instance at 2688 2656 to 2736 2656 R0 -keepConn -sn=1
+select figure at 3482 2433 8 -branches -sn=1
+select figure at 3482 2442 8 -branches -sn=1
+delete selection -sn=1
+add autowire 3056 2560 2992 2560 8 -sn=1
+undo
+select figure at 3060 2565 8 -branches -sn=1
+delete selection -sn=1
+select figure at 2840 2565 8 -branches -sn=1
+select figure at 3332 2631 8 -branches -sn=1
+select figure at 2849 2596 8 -branches -sn=1
+BeginGroup
+add wire 3072 2560 3040 2560 -sn=1
+move instance at 2736 2656 to 2784 2656 R0 -keepConn -sn=1
+EndGroup
+add autowire 2784 2528 2768 2528 8 -sn=1
+select figure at 2761 2526 8 -branches -sn=1
+name net at 2768 2528 8 a(4) -sn=1
+add autowire 2784 2592 2656 2592 8 -sn=1
+add autowire 3456 2352 3072 2688 8 -sn=1
+add autowire 3456 2560 3488 2560 8 -sn=1
+select figure at 3491 2556 8 -branches -sn=1
+BeginGroup
+name net at 3456 2560 8 z(7) -sn=1
+add atwin 3488 2560 3456 2560 8 Name -sn=1
+EndGroup
+select figure at 2818 2934 8 -branches -sn=1

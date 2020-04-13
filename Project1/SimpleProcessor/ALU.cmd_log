@@ -1,0 +1,7 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym ALU /home/adi6/Downloads/YerraguntaKumar_AdityaKrishna_Collins_Gavin/ALU.sch /home/adi6/Downloads/YerraguntaKumar_AdityaKrishna_Collins_Gavin/ALU.sym 
+xst -intstyle ise -ifn "/home/adi6/Downloads/YerraguntaKumar_AdityaKrishna_Collins_Gavin/ALU.xst" -ofn "/home/adi6/Downloads/YerraguntaKumar_AdityaKrishna_Collins_Gavin/ALU.syr" 
+sch2sym -intstyle ise -family spartan6 -w -refsym ALU /home/ise/Desktop/SimpleProcessor/ALU.sch /home/ise/Desktop/SimpleProcessor/ALU.sym 
+xst -intstyle ise -ifn "/home/ise/Desktop/SimpleProcessor/ALU.xst" -ofn "/home/ise/Desktop/SimpleProcessor/ALU.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/SimpleProcessor/ALU.xst" -ofn "/home/ise/Desktop/SimpleProcessor/ALU.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/SimpleProcessor/ALU.xst" -ofn "/home/ise/Desktop/SimpleProcessor/ALU.syr" 
+xst -intstyle ise -ifn "/home/ise/Documents/Project 1/SimpleProcessor/ALU.xst" -ofn "/home/ise/Documents/Project 1/SimpleProcessor/ALU.syr" 

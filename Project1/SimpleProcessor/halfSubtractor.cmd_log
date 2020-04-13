@@ -1,0 +1,5 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym halfSubtractor /home/adi6/Documents/XilinxProjects/Project1/Project1_v1/SimpleProcessor/halfSubtractor.sch /home/adi6/Documents/XilinxProjects/Project1/Project1_v1/SimpleProcessor/halfSubtractor.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym halfSubtractor /home/adi6/Documents/XilinxProjects/Project1/Project1_v1/SimpleProcessor/halfSubtractor.sch /home/adi6/Documents/XilinxProjects/Project1/Project1_v1/SimpleProcessor/halfSubtractor.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym halfSubtractor /home/adi6/Documents/XilinxProjects/Project1/Project1_v1/SimpleProcessor/halfSubtractor.sch /home/adi6/Documents/XilinxProjects/Project1/Project1_v1/SimpleProcessor/halfSubtractor.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym halfSubtractor {/home/ise/Projects/Project 1/SimpleProcessor/halfSubtractor.sch} {/home/ise/Projects/Project 1/SimpleProcessor/halfSubtractor.sym} 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl halfSubtractor_drc.vhf -w {/home/ise/Projects/Project 1/SimpleProcessor/halfSubtractor.sch} 

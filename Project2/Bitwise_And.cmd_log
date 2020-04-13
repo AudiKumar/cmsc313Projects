@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym Bitwise_And {/home/ise/Projects/Project 2/Bitwise_And.sch} {/home/ise/Projects/Project 2/Bitwise_And.sym} 

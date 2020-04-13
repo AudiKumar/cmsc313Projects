@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ise/Projects/Project 2/GPP_GPP_sch_tb_isim_beh.exe" -prj "/home/ise/Projects/Project 2/GPP_GPP_sch_tb_beh.prj" "work.GPP_GPP_sch_tb" 

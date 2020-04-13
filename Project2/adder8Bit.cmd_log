@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym adder8Bit {/home/ise/Projects/Project 2/adder8Bit.sch} {/home/ise/Projects/Project 2/adder8Bit.sym} 

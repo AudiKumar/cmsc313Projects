@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym eight_bit_multiplier {/home/ise/Projects/Project 2/eight_bit_multiplier.sch} {/home/ise/Projects/Project 2/eight_bit_multiplier.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym eight_bit_multiplier {/home/ise/Projects/Project 2/eight_bit_multiplier.sch} {/home/ise/Projects/Project 2/eight_bit_multiplier.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym eight_bit_multiplier {/home/ise/Projects/Project 2/eight_bit_multiplier.sch} {/home/ise/Projects/Project 2/eight_bit_multiplier.sym} 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl eight_bit_multiplier_drc.vhf -w {/home/ise/Projects/Project 2/eight_bit_multiplier.sch} 

@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym eight_bit_Xor {/home/ise/Projects/Project 2/eight_bit_Xor.sch} {/home/ise/Projects/Project 2/eight_bit_Xor.sym} 
+sch2sym -intstyle ise -family spartan6 -w -refsym eight_bit_Xor {/home/ise/Projects/Project 2/eight_bit_Xor.sch} {/home/ise/Projects/Project 2/eight_bit_Xor.sym} 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl eight_bit_Xor_drc.vhf -w {/home/ise/Projects/Project 2/eight_bit_Xor.sch} 

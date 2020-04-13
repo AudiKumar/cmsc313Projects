@@ -1,0 +1,11 @@
+select figure at 1234 866 8 -branches -sn=1
+select figure at 1234 866 8 -branches -all -sn=1
+add autowire 80 160 80 736 8 -sn=1
+add iomarker 80 160 0 Unknown Unknown -sn=1
+select figure at 83 94 8 -branches -sn=1
+name net at 80 160 8 A(7:0) -sn=1
+add autowire 160 160 160 720 8 -sn=1
+undo
+select figure at 1813 1458 8 -branches -sn=1
+select figure at 1813 1458 8 -branches -all -sn=1
+resize sheets 1 "1|1|7040|5440|10|Inch|E = 44 x 34 in"

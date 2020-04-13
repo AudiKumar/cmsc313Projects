@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym half_adder /home/ise/Desktop/SimpleProcessor/half_adder.sch /home/ise/Desktop/SimpleProcessor/half_adder.sym 

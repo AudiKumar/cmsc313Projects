@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym eight_bit_or /home/ise/Desktop/SimpleProcessor/eight_bit_or.sch /home/ise/Desktop/SimpleProcessor/eight_bit_or.sym 
+xst -intstyle ise -ifn "/home/ise/Desktop/SimpleProcessor/eight_bit_or.xst" -ofn "/home/ise/Desktop/SimpleProcessor/eight_bit_or.syr" 
+sch2sym -intstyle ise -family spartan6 -w -refsym eight_bit_or /home/ise/Desktop/SimpleProcessor/eight_bit_or.sch /home/ise/Desktop/SimpleProcessor/eight_bit_or.sym 

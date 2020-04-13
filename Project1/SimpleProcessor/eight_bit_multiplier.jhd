@@ -1,0 +1,3 @@
+MODULE eight_bit_multiplier
+	SUBMODULE half_adder
+		INSTANCE XLXI_58

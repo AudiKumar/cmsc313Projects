@@ -1,0 +1,52 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/ise/Desktop/SimpleProcessor/ALU_ALU_sch_tb_isim_beh.exe -prj /home/ise/Desktop/SimpleProcessor/ALU_ALU_sch_tb_beh.prj work.ALU_ALU_sch_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/subtractor.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/half_adder.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/full_adder.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/subtractor8Bit.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/shift.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/multiplexer.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/eight_bit_Xor.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/eight_bit_or.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/eight_bit_adder.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/Bitwise_And.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/ALU.vhf" into library work
+Parsing VHDL file "/home/ise/Desktop/SimpleProcessor/ALU_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 113464 KB
+Fuse CPU Usage: 4210 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture m8_1e_hxilinx_alu_v of entity M8_1E_HXILINX_ALU [m8_1e_hxilinx_alu_default]
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture behavioral of entity multiplexer_MUSER_ALU [multiplexer_muser_alu_default]
+Compiling architecture xor2_v of entity XOR2 [xor2_default]
+Compiling architecture behavioral of entity eight_bit_Xor_MUSER_ALU [eight_bit_xor_muser_alu_default]
+Compiling architecture and2_v of entity AND2 [and2_default]
+Compiling architecture behavioral of entity Bitwise_And_MUSER_ALU [bitwise_and_muser_alu_default]
+Compiling architecture xor3_v of entity XOR3 [xor3_default]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture or3_v of entity OR3 [or3_default]
+Compiling architecture behavioral of entity subtractor_MUSER_ALU [subtractor_muser_alu_default]
+Compiling architecture behavioral of entity subtractor8Bit_MUSER_ALU [subtractor8bit_muser_alu_default]
+Compiling architecture buf_v of entity BUF [buf_default]
+Compiling architecture behavioral of entity shift_MUSER_ALU [shift_muser_alu_default]
+Compiling architecture behavioral of entity half_adder_MUSER_ALU [half_adder_muser_alu_default]
+Compiling architecture behavioral of entity full_adder_MUSER_ALU [full_adder_muser_alu_default]
+Compiling architecture behavioral of entity eight_bit_adder_MUSER_ALU [eight_bit_adder_muser_alu_defaul...]
+Compiling architecture or2_v of entity OR2 [or2_default]
+Compiling architecture behavioral of entity eight_bit_or_MUSER_ALU [eight_bit_or_muser_alu_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity alu_alu_sch_tb
+Time Resolution for simulation is 1ps.
+Compiled 45 VHDL Units
+Built simulation executable /home/ise/Desktop/SimpleProcessor/ALU_ALU_sch_tb_isim_beh.exe
+Fuse Memory Usage: 129596 KB
+Fuse CPU Usage: 5460 ms
+GCC CPU Usage: 12320 ms

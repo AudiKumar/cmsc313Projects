@@ -1,0 +1,4 @@
+vhdl work "RegParallelLoad_8.vhd"
+vhdl work "Mux2_8.vhd"
+vhdl work "ALU.vhf"
+vhdl work "MPP.vhf"

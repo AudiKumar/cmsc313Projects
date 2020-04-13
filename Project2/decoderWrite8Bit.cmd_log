@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym decoderWrite8Bit {/home/ise/Projects/Project 2/decoderWrite8Bit.sch} {/home/ise/Projects/Project 2/decoderWrite8Bit.sym} 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl decoderWrite8Bit_drc.vhf -w {/home/ise/Projects/Project 2/decoderWrite8Bit.sch} 
+sch2sym -intstyle ise -family spartan6 -w -refsym decoderWrite8Bit {/home/ise/Projects/Project 2/decoderWrite8Bit.sch} {/home/ise/Projects/Project 2/decoderWrite8Bit.sym} 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl decoderWrite8Bit_drc.vhf -w {/home/ise/Projects/Project 2/decoderWrite8Bit.sch} 

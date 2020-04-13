@@ -1,0 +1,494 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALU"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/subtractor.vhf" into library work
+Parsing entity <subtractor>.
+Parsing architecture <BEHAVIORAL> of entity <subtractor>.
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/half_adder.vhf" into library work
+Parsing entity <half_adder>.
+Parsing architecture <BEHAVIORAL> of entity <half_adder>.
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/full_adder.vhf" into library work
+Parsing entity <full_adder>.
+Parsing architecture <BEHAVIORAL> of entity <full_adder>.
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/subtractor8Bit.vhf" into library work
+Parsing entity <subtractor_MUSER_subtractor8Bit>.
+Parsing architecture <BEHAVIORAL> of entity <subtractor_muser_subtractor8bit>.
+Parsing entity <subtractor8Bit>.
+Parsing architecture <BEHAVIORAL> of entity <subtractor8bit>.
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/shift.vhf" into library work
+Parsing entity <shift>.
+Parsing architecture <BEHAVIORAL> of entity <shift>.
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/multiplexer.vhf" into library work
+Parsing entity <M8_1E_HXILINX_multiplexer>.
+Parsing architecture <M8_1E_HXILINX_multiplexer_V> of entity <m8_1e_hxilinx_multiplexer>.
+Parsing entity <multiplexer>.
+Parsing architecture <BEHAVIORAL> of entity <multiplexer>.
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/eight_bit_Xor.vhf" into library work
+Parsing entity <eight_bit_Xor>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_xor>.
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/eight_bit_or.vhf" into library work
+Parsing entity <eight_bit_or>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_or>.
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/eight_bit_adder.vhf" into library work
+Parsing entity <full_adder_MUSER_eight_bit_adder>.
+Parsing architecture <BEHAVIORAL> of entity <full_adder_muser_eight_bit_adder>.
+Parsing entity <half_adder_MUSER_eight_bit_adder>.
+Parsing architecture <BEHAVIORAL> of entity <half_adder_muser_eight_bit_adder>.
+Parsing entity <eight_bit_adder>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_adder>.
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/Bitwise_And.vhf" into library work
+Parsing entity <Bitwise_And>.
+Parsing architecture <BEHAVIORAL> of entity <bitwise_and>.
+Parsing VHDL file "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf" into library work
+Parsing entity <M8_1E_HXILINX_ALU>.
+Parsing architecture <M8_1E_HXILINX_ALU_V> of entity <m8_1e_hxilinx_alu>.
+Parsing entity <eight_bit_or_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_or_muser_alu>.
+Parsing entity <multiplexer_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <multiplexer_muser_alu>.
+Parsing entity <full_adder_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <full_adder_muser_alu>.
+Parsing entity <half_adder_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <half_adder_muser_alu>.
+Parsing entity <eight_bit_adder_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_adder_muser_alu>.
+Parsing entity <shift_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <shift_muser_alu>.
+Parsing entity <subtractor_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <subtractor_muser_alu>.
+Parsing entity <subtractor8Bit_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <subtractor8bit_muser_alu>.
+Parsing entity <Bitwise_And_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <bitwise_and_muser_alu>.
+Parsing entity <eight_bit_Xor_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_xor_muser_alu>.
+Parsing entity <ALU>.
+Parsing architecture <BEHAVIORAL> of entity <alu>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <ALU> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <multiplexer_MUSER_ALU> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <M8_1E_HXILINX_ALU> (architecture <M8_1E_HXILINX_ALU_V>) from library <work>.
+INFO:HDLCompiler:679 - "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf" Line 64. Case statement is complete. others clause is never selected
+
+Elaborating entity <eight_bit_Xor_MUSER_ALU> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <Bitwise_And_MUSER_ALU> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <subtractor8Bit_MUSER_ALU> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <subtractor_MUSER_ALU> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <shift_MUSER_ALU> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <eight_bit_adder_MUSER_ALU> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <half_adder_MUSER_ALU> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <full_adder_MUSER_ALU> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <eight_bit_or_MUSER_ALU> (architecture <BEHAVIORAL>) from library <work>.
+WARNING:HDLCompiler:634 - "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf" Line 942: Net <XLXI_1_H_openSignal[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+INFO:Xst:3210 - "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf" line 1016: Output port <carryout> of the instance <XLXI_5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf" line 1026: Output port <CarryOut> of the instance <XLXI_7> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <XLXI_1_H_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <ALU> synthesized.
+
+Synthesizing Unit <multiplexer_MUSER_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Set property "HU_SET = XLXI_1_0" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_1" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_2" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_3" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_4" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_5" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_6" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_7" for instance <XLXI_8>.
+    Summary:
+	no macro.
+Unit <multiplexer_MUSER_ALU> synthesized.
+
+Synthesizing Unit <M8_1E_HXILINX_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Found 1-bit 8-to-1 multiplexer for signal <S2_D7_Mux_0_o> created at line 55.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <M8_1E_HXILINX_ALU> synthesized.
+
+Synthesizing Unit <eight_bit_Xor_MUSER_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Summary:
+	no macro.
+Unit <eight_bit_Xor_MUSER_ALU> synthesized.
+
+Synthesizing Unit <Bitwise_And_MUSER_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Summary:
+	no macro.
+Unit <Bitwise_And_MUSER_ALU> synthesized.
+
+Synthesizing Unit <subtractor8Bit_MUSER_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Summary:
+	no macro.
+Unit <subtractor8Bit_MUSER_ALU> synthesized.
+
+Synthesizing Unit <subtractor_MUSER_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Summary:
+	no macro.
+Unit <subtractor_MUSER_ALU> synthesized.
+
+Synthesizing Unit <shift_MUSER_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Summary:
+	no macro.
+Unit <shift_MUSER_ALU> synthesized.
+
+Synthesizing Unit <eight_bit_adder_MUSER_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Summary:
+	no macro.
+Unit <eight_bit_adder_MUSER_ALU> synthesized.
+
+Synthesizing Unit <half_adder_MUSER_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Summary:
+	no macro.
+Unit <half_adder_MUSER_ALU> synthesized.
+
+Synthesizing Unit <full_adder_MUSER_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Summary:
+	no macro.
+Unit <full_adder_MUSER_ALU> synthesized.
+
+Synthesizing Unit <eight_bit_or_MUSER_ALU>.
+    Related source file is "/home/ise/Documents/Project 1/SimpleProcessor/ALU.vhf".
+    Summary:
+	no macro.
+Unit <eight_bit_or_MUSER_ALU> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 8
+ 1-bit 8-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 8
+ 1-bit 8-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <shift_MUSER_ALU> ...
+
+Optimizing unit <multiplexer_MUSER_ALU> ...
+
+Optimizing unit <M8_1E_HXILINX_ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ALU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 144
+#      AND2                        : 55
+#      BUF                         : 7
+#      GND                         : 1
+#      INV                         : 9
+#      LUT6                        : 16
+#      MUXF7                       : 8
+#      OR2                         : 8
+#      OR3                         : 15
+#      VCC                         : 1
+#      XOR2                        : 9
+#      XOR3                        : 15
+# IO Buffers                       : 27
+#      IBUF                        : 19
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   25  out of   5720     0%  
+    Number used as Logic:                25  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     25
+   Number with an unused Flip Flop:      25  out of     25   100%  
+   Number with an unused LUT:             0  out of     25     0%  
+   Number of fully used LUT-FF pairs:     0  out of     25     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          27
+ Number of bonded IOBs:                  27  out of    102    26%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 24.535ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1859 / 8
+-------------------------------------------------------------------------
+Delay:               24.535ns (Levels of Logic = 21)
+  Source:            A<0> (PAD)
+  Destination:       O<7> (PAD)
+
+  Data Path: A<0> to O<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   0.829  A_0_IBUF (A_0_IBUF)
+     INV:I->O              2   0.568   0.961  XLXI_5/XLXI_10/XLXI_2 (XLXI_5/XLXI_10/XLXN_28)
+     AND2:I1->O            1   0.223   0.944  XLXI_5/XLXI_10/XLXI_5 (XLXI_5/XLXI_10/XLXN_12)
+     OR3:I0->O             3   0.203   1.015  XLXI_5/XLXI_10/XLXI_6 (XLXI_5/XLXN_11)
+     AND2:I0->O            1   0.203   0.944  XLXI_5/XLXI_3/XLXI_5 (XLXI_5/XLXI_3/XLXN_12)
+     OR3:I0->O             3   0.203   1.015  XLXI_5/XLXI_3/XLXI_6 (XLXI_5/XLXN_77)
+     AND2:I0->O            1   0.203   0.944  XLXI_5/XLXI_4/XLXI_5 (XLXI_5/XLXI_4/XLXN_12)
+     OR3:I0->O             3   0.203   1.015  XLXI_5/XLXI_4/XLXI_6 (XLXI_5/XLXN_42)
+     AND2:I0->O            1   0.203   0.944  XLXI_5/XLXI_5/XLXI_5 (XLXI_5/XLXI_5/XLXN_12)
+     OR3:I0->O             3   0.203   1.015  XLXI_5/XLXI_5/XLXI_6 (XLXI_5/XLXN_78)
+     AND2:I0->O            1   0.203   0.944  XLXI_5/XLXI_6/XLXI_5 (XLXI_5/XLXI_6/XLXN_12)
+     OR3:I0->O             3   0.203   1.015  XLXI_5/XLXI_6/XLXI_6 (XLXI_5/XLXN_36)
+     AND2:I0->O            1   0.203   0.944  XLXI_5/XLXI_7/XLXI_5 (XLXI_5/XLXI_7/XLXN_12)
+     OR3:I0->O             3   0.203   1.015  XLXI_5/XLXI_7/XLXI_6 (XLXI_5/XLXN_79)
+     AND2:I0->O            1   0.203   0.944  XLXI_5/XLXI_8/XLXI_5 (XLXI_5/XLXI_8/XLXN_12)
+     OR3:I0->O             3   0.203   1.015  XLXI_5/XLXI_8/XLXI_6 (XLXI_5/XLXN_55)
+     XOR3:I0->O            1   0.203   0.684  XLXI_5/XLXI_9/XLXI_1 (XLXN_35<7>)
+     begin scope: 'XLXI_1/XLXI_8:D5'
+     LUT6:I4->O            1   0.203   0.000  Mmux_S2_D7_Mux_0_o_3 (Mmux_S2_D7_Mux_0_o_3)
+     MUXF7:I1->O           1   0.140   0.579  Mmux_S2_D7_Mux_0_o_2_f7 (O)
+     end scope: 'XLXI_1/XLXI_8:O'
+     OBUF:I->O                 2.571          O_7_OBUF (O<7>)
+    ----------------------------------------
+    Total                     24.535ns (7.769ns logic, 16.766ns route)
+                                       (31.7% logic, 68.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 6.58 secs
+ 
+--> 
+
+
+Total memory usage is 491620 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

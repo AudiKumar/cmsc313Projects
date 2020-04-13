@@ -1,0 +1,1044 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: GPP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "GPP.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "GPP"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : GPP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/Projects/Project 2/half_adder.vhf" into library work
+Parsing entity <half_adder>.
+Parsing architecture <BEHAVIORAL> of entity <half_adder>.
+Parsing VHDL file "/home/ise/Projects/Project 2/halfSubtractor.vhf" into library work
+Parsing entity <halfSubtractor>.
+Parsing architecture <BEHAVIORAL> of entity <halfsubtractor>.
+Parsing VHDL file "/home/ise/Projects/Project 2/full_adder.vhf" into library work
+Parsing entity <full_adder>.
+Parsing architecture <BEHAVIORAL> of entity <full_adder>.
+Parsing VHDL file "/home/ise/Projects/Project 2/fullSubtractor.vhf" into library work
+Parsing entity <fullSubtractor>.
+Parsing architecture <BEHAVIORAL> of entity <fullsubtractor>.
+Parsing VHDL file "/home/ise/Projects/Project 2/subtractor8Bit.vhf" into library work
+Parsing entity <fullSubtractor_MUSER_subtractor8Bit>.
+Parsing architecture <BEHAVIORAL> of entity <fullsubtractor_muser_subtractor8bit>.
+Parsing entity <halfSubtractor_MUSER_subtractor8Bit>.
+Parsing architecture <BEHAVIORAL> of entity <halfsubtractor_muser_subtractor8bit>.
+Parsing entity <subtractor8Bit>.
+Parsing architecture <BEHAVIORAL> of entity <subtractor8bit>.
+Parsing VHDL file "/home/ise/Projects/Project 2/shift.vhf" into library work
+Parsing entity <shift>.
+Parsing architecture <BEHAVIORAL> of entity <shift>.
+Parsing VHDL file "/home/ise/Projects/Project 2/register8Bit.vhf" into library work
+Parsing entity <register8Bit>.
+Parsing architecture <BEHAVIORAL> of entity <register8bit>.
+Parsing VHDL file "/home/ise/Projects/Project 2/readPortMux.vhf" into library work
+Parsing entity <M4_1E_HXILINX_readPortMux>.
+Parsing architecture <M4_1E_HXILINX_readPortMux_V> of entity <m4_1e_hxilinx_readportmux>.
+Parsing entity <readPortMux>.
+Parsing architecture <BEHAVIORAL> of entity <readportmux>.
+Parsing VHDL file "/home/ise/Projects/Project 2/Mux2_4.vhd" into library work
+Parsing entity <Mux2_4>.
+Parsing architecture <Behavioral> of entity <mux2_4>.
+Parsing VHDL file "/home/ise/Projects/Project 2/Mux16_9.vhd" into library work
+Parsing entity <Mux16_9>.
+Parsing architecture <Behavioral> of entity <mux16_9>.
+Parsing VHDL file "/home/ise/Projects/Project 2/Mux16_4.vhd" into library work
+Parsing entity <Mux16_4>.
+Parsing architecture <Behavioral> of entity <mux16_4>.
+Parsing VHDL file "/home/ise/Projects/Project 2/multiplexer.vhf" into library work
+Parsing entity <M8_1E_HXILINX_multiplexer>.
+Parsing architecture <M8_1E_HXILINX_multiplexer_V> of entity <m8_1e_hxilinx_multiplexer>.
+Parsing entity <multiplexer>.
+Parsing architecture <BEHAVIORAL> of entity <multiplexer>.
+Parsing VHDL file "/home/ise/Projects/Project 2/EqualityComp_8.vhd" into library work
+Parsing entity <EqualityComp_8>.
+Parsing architecture <Behavioral> of entity <equalitycomp_8>.
+Parsing VHDL file "/home/ise/Projects/Project 2/eight_bit_Xor.vhf" into library work
+Parsing entity <eight_bit_Xor>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_xor>.
+Parsing VHDL file "/home/ise/Projects/Project 2/eight_bit_or.vhf" into library work
+Parsing entity <eight_bit_or>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_or>.
+Parsing VHDL file "/home/ise/Projects/Project 2/eight_bit_multiplier.vhf" into library work
+Parsing entity <OR8_HXILINX_eight_bit_multiplier>.
+Parsing architecture <OR8_HXILINX_eight_bit_multiplier_V> of entity <or8_hxilinx_eight_bit_multiplier>.
+Parsing entity <full_adder_MUSER_eight_bit_multiplier>.
+Parsing architecture <BEHAVIORAL> of entity <full_adder_muser_eight_bit_multiplier>.
+Parsing entity <half_adder_MUSER_eight_bit_multiplier>.
+Parsing architecture <BEHAVIORAL> of entity <half_adder_muser_eight_bit_multiplier>.
+Parsing entity <eight_bit_multiplier>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_multiplier>.
+Parsing VHDL file "/home/ise/Projects/Project 2/decoderWrite8Bit.vhf" into library work
+Parsing entity <D2_4E_HXILINX_decoderWrite8Bit>.
+Parsing architecture <D2_4E_HXILINX_decoderWrite8Bit_V> of entity <d2_4e_hxilinx_decoderwrite8bit>.
+Parsing entity <decoderWrite8Bit>.
+Parsing architecture <BEHAVIORAL> of entity <decoderwrite8bit>.
+Parsing VHDL file "/home/ise/Projects/Project 2/Bitwise_And.vhf" into library work
+Parsing entity <Bitwise_And>.
+Parsing architecture <BEHAVIORAL> of entity <bitwise_and>.
+Parsing VHDL file "/home/ise/Projects/Project 2/Adder_4.vhd" into library work
+Parsing entity <Adder_4>.
+Parsing architecture <Behavioral> of entity <adder_4>.
+Parsing VHDL file "/home/ise/Projects/Project 2/adder8Bit.vhf" into library work
+Parsing entity <full_adder_MUSER_adder8Bit>.
+Parsing architecture <BEHAVIORAL> of entity <full_adder_muser_adder8bit>.
+Parsing entity <half_adder_MUSER_adder8Bit>.
+Parsing architecture <BEHAVIORAL> of entity <half_adder_muser_adder8bit>.
+Parsing entity <adder8Bit>.
+Parsing architecture <BEHAVIORAL> of entity <adder8bit>.
+Parsing VHDL file "/home/ise/Projects/Project 2/RegParallelLoad_4.vhd" into library work
+Parsing entity <RegParallelLoad_4>.
+Parsing architecture <Behavioral> of entity <regparallelload_4>.
+Parsing VHDL file "/home/ise/Projects/Project 2/RegParallelLoad_1.vhf" into library work
+Parsing entity <RegParallelLoad_1>.
+Parsing architecture <BEHAVIORAL> of entity <regparallelload_1>.
+Parsing VHDL file "/home/ise/Projects/Project 2/RegFile.vhf" into library work
+Parsing entity <M4_1E_HXILINX_RegFile>.
+Parsing architecture <M4_1E_HXILINX_RegFile_V> of entity <m4_1e_hxilinx_regfile>.
+Parsing entity <D2_4E_HXILINX_RegFile>.
+Parsing architecture <D2_4E_HXILINX_RegFile_V> of entity <d2_4e_hxilinx_regfile>.
+Parsing entity <readPortMux_MUSER_RegFile>.
+Parsing architecture <BEHAVIORAL> of entity <readportmux_muser_regfile>.
+Parsing entity <decoderWrite8Bit_MUSER_RegFile>.
+Parsing architecture <BEHAVIORAL> of entity <decoderwrite8bit_muser_regfile>.
+Parsing entity <register8Bit_MUSER_RegFile>.
+Parsing architecture <BEHAVIORAL> of entity <register8bit_muser_regfile>.
+Parsing entity <RegFile>.
+Parsing architecture <BEHAVIORAL> of entity <regfile>.
+Parsing VHDL file "/home/ise/Projects/Project 2/Mux2_8.vhd" into library work
+Parsing entity <Mux2_8>.
+Parsing architecture <Behavioral> of entity <mux2_8>.
+Parsing VHDL file "/home/ise/Projects/Project 2/Instruction_ROM.vhf" into library work
+Parsing entity <Instruction_ROM>.
+Parsing architecture <BEHAVIORAL> of entity <instruction_rom>.
+Parsing VHDL file "/home/ise/Projects/Project 2/Instruction_Decoder.vhf" into library work
+Parsing entity <M8_1E_HXILINX_Instruction_Decoder>.
+Parsing architecture <M8_1E_HXILINX_Instruction_Decoder_V> of entity <m8_1e_hxilinx_instruction_decoder>.
+Parsing entity <Instruction_Decoder>.
+Parsing architecture <BEHAVIORAL> of entity <instruction_decoder>.
+Parsing VHDL file "/home/ise/Projects/Project 2/ControlALU.vhf" into library work
+Parsing entity <ControlALU>.
+Parsing architecture <BEHAVIORAL> of entity <controlalu>.
+Parsing VHDL file "/home/ise/Projects/Project 2/ALU.vhf" into library work
+Parsing entity <M8_1E_HXILINX_ALU>.
+Parsing architecture <M8_1E_HXILINX_ALU_V> of entity <m8_1e_hxilinx_alu>.
+Parsing entity <OR8_HXILINX_ALU>.
+Parsing architecture <OR8_HXILINX_ALU_V> of entity <or8_hxilinx_alu>.
+Parsing entity <full_adder_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <full_adder_muser_alu>.
+Parsing entity <half_adder_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <half_adder_muser_alu>.
+Parsing entity <eight_bit_multiplier_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_multiplier_muser_alu>.
+Parsing entity <eight_bit_or_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_or_muser_alu>.
+Parsing entity <eight_bit_Xor_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_xor_muser_alu>.
+Parsing entity <shift_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <shift_muser_alu>.
+Parsing entity <Bitwise_And_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <bitwise_and_muser_alu>.
+Parsing entity <multiplexer_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <multiplexer_muser_alu>.
+Parsing entity <fullSubtractor_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <fullsubtractor_muser_alu>.
+Parsing entity <halfSubtractor_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <halfsubtractor_muser_alu>.
+Parsing entity <subtractor8Bit_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <subtractor8bit_muser_alu>.
+Parsing entity <adder8Bit_MUSER_ALU>.
+Parsing architecture <BEHAVIORAL> of entity <adder8bit_muser_alu>.
+Parsing entity <ALU>.
+Parsing architecture <BEHAVIORAL> of entity <alu>.
+Parsing VHDL file "/home/ise/Projects/Project 2/GPP.vhf" into library work
+Parsing entity <M8_1E_HXILINX_GPP>.
+Parsing architecture <M8_1E_HXILINX_GPP_V> of entity <m8_1e_hxilinx_gpp>.
+Parsing entity <OR8_HXILINX_GPP>.
+Parsing architecture <OR8_HXILINX_GPP_V> of entity <or8_hxilinx_gpp>.
+Parsing entity <M4_1E_HXILINX_GPP>.
+Parsing architecture <M4_1E_HXILINX_GPP_V> of entity <m4_1e_hxilinx_gpp>.
+Parsing entity <D2_4E_HXILINX_GPP>.
+Parsing architecture <D2_4E_HXILINX_GPP_V> of entity <d2_4e_hxilinx_gpp>.
+Parsing entity <full_adder_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <full_adder_muser_gpp>.
+Parsing entity <half_adder_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <half_adder_muser_gpp>.
+Parsing entity <eight_bit_multiplier_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_multiplier_muser_gpp>.
+Parsing entity <eight_bit_or_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_or_muser_gpp>.
+Parsing entity <eight_bit_Xor_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <eight_bit_xor_muser_gpp>.
+Parsing entity <shift_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <shift_muser_gpp>.
+Parsing entity <Bitwise_And_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <bitwise_and_muser_gpp>.
+Parsing entity <multiplexer_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <multiplexer_muser_gpp>.
+Parsing entity <fullSubtractor_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <fullsubtractor_muser_gpp>.
+Parsing entity <halfSubtractor_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <halfsubtractor_muser_gpp>.
+Parsing entity <subtractor8Bit_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <subtractor8bit_muser_gpp>.
+Parsing entity <adder8Bit_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <adder8bit_muser_gpp>.
+Parsing entity <ALU_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <alu_muser_gpp>.
+Parsing entity <readPortMux_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <readportmux_muser_gpp>.
+Parsing entity <decoderWrite8Bit_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <decoderwrite8bit_muser_gpp>.
+Parsing entity <register8Bit_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <register8bit_muser_gpp>.
+Parsing entity <RegFile_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <regfile_muser_gpp>.
+Parsing entity <Instruction_ROM_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <instruction_rom_muser_gpp>.
+Parsing entity <ControlALU_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <controlalu_muser_gpp>.
+Parsing entity <Instruction_Decoder_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <instruction_decoder_muser_gpp>.
+Parsing entity <RegParallelLoad_1_MUSER_GPP>.
+Parsing architecture <BEHAVIORAL> of entity <regparallelload_1_muser_gpp>.
+Parsing entity <GPP>.
+Parsing architecture <BEHAVIORAL> of entity <gpp>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <ControlALU_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <Mux16_4> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Adder_4> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Mux2_4> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <RegParallelLoad_1_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <ALU_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <EqualityComp_8> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <M8_1E_HXILINX_GPP> (architecture <M8_1E_HXILINX_GPP_V>) from library <work>.
+INFO:HDLCompiler:679 - "/home/ise/Projects/Project 2/GPP.vhf" Line 64. Case statement is complete. others clause is never selected
+
+Elaborating entity <adder8Bit_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <half_adder_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <full_adder_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <subtractor8Bit_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <halfSubtractor_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <fullSubtractor_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <multiplexer_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <Bitwise_And_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <shift_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <eight_bit_Xor_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <eight_bit_or_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <eight_bit_multiplier_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <OR8_HXILINX_GPP> (architecture <OR8_HXILINX_GPP_V>) from library <work>.
+WARNING:HDLCompiler:634 - "/home/ise/Projects/Project 2/GPP.vhf" Line 2042: Net <mul_overflow> does not have a driver.
+
+Elaborating entity <Mux2_8> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Instruction_ROM_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <Mux16_9> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Instruction_Decoder_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <RegParallelLoad_4> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <RegFile_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <decoderWrite8Bit_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <D2_4E_HXILINX_GPP> (architecture <D2_4E_HXILINX_GPP_V>) from library <work>.
+INFO:HDLCompiler:679 - "/home/ise/Projects/Project 2/GPP.vhf" Line 167. Case statement is complete. others clause is never selected
+
+Elaborating entity <register8Bit_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <readPortMux_MUSER_GPP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <M4_1E_HXILINX_GPP> (architecture <M4_1E_HXILINX_GPP_V>) from library <work>.
+INFO:HDLCompiler:679 - "/home/ise/Projects/Project 2/GPP.vhf" Line 128. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <GPP> synthesized.
+
+Synthesizing Unit <ControlALU_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+WARNING:Xst:37 - Detected unknown constraint/property "BusWidth". This constraint/property is not supported by the current software release and will be ignored.
+INFO:Xst:3210 - "/home/ise/Projects/Project 2/GPP.vhf" line 2812: Output port <carry> of the instance <XLXI_2> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <ControlALU_MUSER_GPP> synthesized.
+
+Synthesizing Unit <Mux16_4>.
+    Related source file is "/home/ise/Projects/Project 2/Mux16_4.vhd".
+        BusWidth = 4
+    Found 4-bit 16-to-1 multiplexer for signal <o> created at line 15.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux16_4> synthesized.
+
+Synthesizing Unit <Adder_4>.
+    Related source file is "/home/ise/Projects/Project 2/Adder_4.vhd".
+        BusWidth = 4
+    Found 5-bit adder for signal <with_carry> created at line 28.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Adder_4> synthesized.
+
+Synthesizing Unit <Mux2_4>.
+    Related source file is "/home/ise/Projects/Project 2/Mux2_4.vhd".
+        BusWidth = 4
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux2_4> synthesized.
+
+Synthesizing Unit <RegParallelLoad_1_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <RegParallelLoad_1_MUSER_GPP> synthesized.
+
+Synthesizing Unit <ALU_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Set property "HU_SET = XLXI_41_28" for instance <XLXI_41>.
+INFO:Xst:3210 - "/home/ise/Projects/Project 2/GPP.vhf" line 2240: Output port <overflow> of the instance <XLXI_83> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <mul_overflow> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <ALU_MUSER_GPP> synthesized.
+
+Synthesizing Unit <EqualityComp_8>.
+    Related source file is "/home/ise/Projects/Project 2/EqualityComp_8.vhd".
+        BusWidth = 8
+    Summary:
+	no macro.
+Unit <EqualityComp_8> synthesized.
+
+Synthesizing Unit <M8_1E_HXILINX_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Found 1-bit 8-to-1 multiplexer for signal <S2_D7_Mux_0_o> created at line 55.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <M8_1E_HXILINX_GPP> synthesized.
+
+Synthesizing Unit <adder8Bit_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <adder8Bit_MUSER_GPP> synthesized.
+
+Synthesizing Unit <half_adder_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <half_adder_MUSER_GPP> synthesized.
+
+Synthesizing Unit <full_adder_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <full_adder_MUSER_GPP> synthesized.
+
+Synthesizing Unit <subtractor8Bit_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <subtractor8Bit_MUSER_GPP> synthesized.
+
+Synthesizing Unit <halfSubtractor_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <halfSubtractor_MUSER_GPP> synthesized.
+
+Synthesizing Unit <fullSubtractor_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <fullSubtractor_MUSER_GPP> synthesized.
+
+Synthesizing Unit <multiplexer_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Set property "HU_SET = XLXI_1_20" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_21" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_22" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_23" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_24" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_25" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_26" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_27" for instance <XLXI_8>.
+    Summary:
+	no macro.
+Unit <multiplexer_MUSER_GPP> synthesized.
+
+Synthesizing Unit <Bitwise_And_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <Bitwise_And_MUSER_GPP> synthesized.
+
+Synthesizing Unit <shift_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <shift_MUSER_GPP> synthesized.
+
+Synthesizing Unit <eight_bit_Xor_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <eight_bit_Xor_MUSER_GPP> synthesized.
+
+Synthesizing Unit <eight_bit_or_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <eight_bit_or_MUSER_GPP> synthesized.
+
+Synthesizing Unit <eight_bit_multiplier_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Set property "HU_SET = XLXI_674_19" for instance <XLXI_674>.
+    Summary:
+	no macro.
+Unit <eight_bit_multiplier_MUSER_GPP> synthesized.
+
+Synthesizing Unit <OR8_HXILINX_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <OR8_HXILINX_GPP> synthesized.
+
+Synthesizing Unit <Mux2_8>.
+    Related source file is "/home/ise/Projects/Project 2/Mux2_8.vhd".
+        BusWidth = 8
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux2_8> synthesized.
+
+Synthesizing Unit <Instruction_ROM_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+WARNING:Xst:37 - Detected unknown constraint/property "BusWidth". This constraint/property is not supported by the current software release and will be ignored.
+    Summary:
+	no macro.
+Unit <Instruction_ROM_MUSER_GPP> synthesized.
+
+Synthesizing Unit <Mux16_9>.
+    Related source file is "/home/ise/Projects/Project 2/Mux16_9.vhd".
+        BusWidth = 9
+    Found 16x9-bit Read Only RAM for signal <o>
+    Summary:
+	inferred   1 RAM(s).
+Unit <Mux16_9> synthesized.
+
+Synthesizing Unit <Instruction_Decoder_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Set property "HU_SET = XLXI_29_38" for instance <XLXI_29>.
+    Set property "HU_SET = XLXI_30_39" for instance <XLXI_30>.
+    Summary:
+	no macro.
+Unit <Instruction_Decoder_MUSER_GPP> synthesized.
+
+Synthesizing Unit <RegParallelLoad_4>.
+    Related source file is "/home/ise/Projects/Project 2/RegParallelLoad_4.vhd".
+        BusWidth = 4
+    Found 4-bit register for signal <q_temp>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <RegParallelLoad_4> synthesized.
+
+Synthesizing Unit <RegFile_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <RegFile_MUSER_GPP> synthesized.
+
+Synthesizing Unit <decoderWrite8Bit_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Set property "HU_SET = XLXI_1_37" for instance <XLXI_1>.
+    Summary:
+	no macro.
+Unit <decoderWrite8Bit_MUSER_GPP> synthesized.
+
+Synthesizing Unit <D2_4E_HXILINX_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <D2_4E_HXILINX_GPP> synthesized.
+
+Synthesizing Unit <register8Bit_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Summary:
+	no macro.
+Unit <register8Bit_MUSER_GPP> synthesized.
+
+Synthesizing Unit <readPortMux_MUSER_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Set property "HU_SET = XLXI_1_29" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_9_30" for instance <XLXI_9>.
+    Set property "HU_SET = XLXI_10_31" for instance <XLXI_10>.
+    Set property "HU_SET = XLXI_11_32" for instance <XLXI_11>.
+    Set property "HU_SET = XLXI_20_33" for instance <XLXI_20>.
+    Set property "HU_SET = XLXI_21_34" for instance <XLXI_21>.
+    Set property "HU_SET = XLXI_22_35" for instance <XLXI_22>.
+    Set property "HU_SET = XLXI_23_36" for instance <XLXI_23>.
+    Summary:
+	no macro.
+Unit <readPortMux_MUSER_GPP> synthesized.
+
+Synthesizing Unit <M4_1E_HXILINX_GPP>.
+    Related source file is "/home/ise/Projects/Project 2/GPP.vhf".
+    Found 1-bit 4-to-1 multiplexer for signal <S1_D3_Mux_0_o> created at line 123.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <M4_1E_HXILINX_GPP> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x9-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 1
+ 4-bit register                                        : 1
+# Multiplexers                                         : 63
+ 1-bit 2-to-1 multiplexer                              : 27
+ 1-bit 4-to-1 multiplexer                              : 16
+ 1-bit 8-to-1 multiplexer                              : 11
+ 4-bit 16-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <XLXI_674> is unconnected in block <XLXI_83>.
+   It will be removed from the design.
+
+Synthesizing (advanced) Unit <Mux16_9>.
+INFO:Xst:3231 - The small RAM <Mram_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <o>             |          |
+    -----------------------------------------------------------------------
+Unit <Mux16_9> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x9-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 39
+ Flip-Flops                                            : 39
+# Multiplexers                                         : 63
+ 1-bit 2-to-1 multiplexer                              : 27
+ 1-bit 4-to-1 multiplexer                              : 16
+ 1-bit 8-to-1 multiplexer                              : 11
+ 4-bit 16-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2973 - All outputs of instance <XLXI_83/XLXI_674> of block <OR8_HXILINX_GPP> are unconnected in block <ALU_MUSER_GPP>. Underlying logic will be removed.
+
+Optimizing unit <multiplexer_MUSER_GPP> ...
+
+Optimizing unit <shift_MUSER_GPP> ...
+
+Optimizing unit <GPP> ...
+
+Optimizing unit <M4_1E_HXILINX_GPP> ...
+
+Optimizing unit <D2_4E_HXILINX_GPP> ...
+
+Optimizing unit <ALU_MUSER_GPP> ...
+
+Optimizing unit <M8_1E_HXILINX_GPP> ...
+
+Optimizing unit <ControlALU_MUSER_GPP> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block GPP, actual ratio is 1.
+FlipFlop PROGRAM_COUNTER/q_temp[3]_dff_2_0 has been replicated 2 time(s)
+FlipFlop PROGRAM_COUNTER/q_temp[3]_dff_2_1 has been replicated 1 time(s)
+FlipFlop PROGRAM_COUNTER/q_temp[3]_dff_2_2 has been replicated 1 time(s)
+FlipFlop PROGRAM_COUNTER/q_temp[3]_dff_2_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : GPP.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 527
+#      AND2                        : 263
+#      BUF                         : 9
+#      GND                         : 2
+#      INV                         : 18
+#      LUT2                        : 1
+#      LUT3                        : 6
+#      LUT4                        : 9
+#      LUT5                        : 1
+#      LUT6                        : 49
+#      MUXF7                       : 10
+#      OR2                         : 15
+#      OR3                         : 55
+#      VCC                         : 2
+#      XOR2                        : 32
+#      XOR3                        : 55
+# FlipFlops/Latches                : 44
+#      FDE                         : 44
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 32
+#      IBUF                        : 8
+#      OBUF                        : 24
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              44  out of  11440     0%  
+ Number of Slice LUTs:                   84  out of   5720     1%  
+    Number used as Logic:                84  out of   5720     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    128
+   Number with an unused Flip Flop:      84  out of    128    65%  
+   Number with an unused LUT:            44  out of    128    34%  
+   Number of fully used LUT-FF pairs:     0  out of    128     0%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of    102    32%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 44    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 29.888ns (Maximum Frequency: 33.459MHz)
+   Minimum input arrival time before clock: 28.458ns
+   Maximum output required time after clock: 31.210ns
+   Maximum combinational path delay: 29.780ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 29.888ns (frequency: 33.459MHz)
+  Total number of paths / destination ports: 2650487 / 79
+-------------------------------------------------------------------------
+Delay:               29.888ns (Levels of Logic = 27)
+  Source:            PROGRAM_COUNTER/q_temp[3]_dff_2_3 (FF)
+  Destination:       N_FLAG/XLXI_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: PROGRAM_COUNTER/q_temp[3]_dff_2_3 to N_FLAG/XLXI_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             19   0.447   1.300  PROGRAM_COUNTER/q_temp[3]_dff_2_3 (PROGRAM_COUNTER/q_temp[3]_dff_2_3)
+     LUT4:I1->O           10   0.205   0.857  INSTRUCTION_PROM/INSTRUCTION_SELECT/Mram_o111 (INSTRUCTION_PROM/INSTRUCTION_SELECT/Mram_o1)
+     begin scope: 'REG_FILE/XLXI_7/XLXI_1:S1'
+     LUT6:I5->O            1   0.205   0.580  Mmux_O11 (O)
+     end scope: 'REG_FILE/XLXI_7/XLXI_1:O'
+     LUT6:I5->O           19   0.205   1.436  INPUT_SEL/Mmux_o11 (XLXN_73<0>)
+     AND2:I0->O            2   0.203   0.981  DATA_ALU/XLXI_83/XLXI_61 (DATA_ALU/XLXI_83/XLXN_99)
+     AND2:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_67/XLXI_2 (DATA_ALU/XLXI_83/XLXN_118)
+     AND2:I0->O            1   0.203   0.924  DATA_ALU/XLXI_83/XLXI_69/XLXI_3 (DATA_ALU/XLXI_83/XLXI_69/XLXN_17)
+     OR3:I1->O             3   0.223   1.015  DATA_ALU/XLXI_83/XLXI_69/XLXI_5 (DATA_ALU/XLXI_83/XLXN_174)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_97/XLXI_1 (DATA_ALU/XLXI_83/XLXN_150)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_96/XLXI_2 (DATA_ALU/XLXI_83/XLXI_96/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_96/XLXI_5 (DATA_ALU/XLXI_83/XLXN_189)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_116/XLXI_1 (DATA_ALU/XLXI_83/XLXN_187)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_111/XLXI_2 (DATA_ALU/XLXI_83/XLXI_111/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_111/XLXI_5 (DATA_ALU/XLXI_83/XLXN_249)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_119/XLXI_1 (DATA_ALU/XLXI_83/XLXN_390)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_164/XLXI_2 (DATA_ALU/XLXI_83/XLXI_164/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_164/XLXI_5 (DATA_ALU/XLXI_83/XLXN_401)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_165/XLXI_1 (DATA_ALU/XLXI_83/XLXN_400)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_179/XLXI_2 (DATA_ALU/XLXI_83/XLXI_179/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_179/XLXI_5 (DATA_ALU/XLXI_83/XLXN_418)
+     XOR3:I0->O            3   0.203   0.995  DATA_ALU/XLXI_83/XLXI_180/XLXI_1 (DATA_ALU/XLXI_83/XLXN_429)
+     XOR3:I1->O            2   0.223   0.961  DATA_ALU/XLXI_83/XLXI_213/XLXI_1 (DATA_ALU/XLXI_83/XLXN_1444)
+     XOR2:I1->O            1   0.223   0.580  DATA_ALU/XLXI_83/XLXI_219/XLXI_1 (DATA_ALU/XLXN_187<7>)
+     begin scope: 'DATA_ALU/XLXI_78/XLXI_8:D7'
+     LUT6:I5->O            1   0.205   0.000  Mmux_S2_D7_Mux_0_o_3 (Mmux_S2_D7_Mux_0_o_3)
+     MUXF7:I1->O           7   0.140   0.773  Mmux_S2_D7_Mux_0_o_2_f7 (O)
+     end scope: 'DATA_ALU/XLXI_78/XLXI_8:O'
+     BUF:I->O              1   0.568   0.579  DATA_ALU/XLXI_32 (alu_N)
+     FDE:D                     0.102          N_FLAG/XLXI_1
+    ----------------------------------------
+    Total                     29.888ns (6.462ns logic, 23.426ns route)
+                                       (21.6% logic, 78.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 94638 / 35
+-------------------------------------------------------------------------
+Offset:              28.458ns (Levels of Logic = 25)
+  Source:            Input<0> (PAD)
+  Destination:       N_FLAG/XLXI_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: Input<0> to N_FLAG/XLXI_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.944  Input_0_IBUF (Input_0_IBUF)
+     LUT6:I0->O           19   0.203   1.436  INPUT_SEL/Mmux_o11 (XLXN_73<0>)
+     AND2:I0->O            2   0.203   0.981  DATA_ALU/XLXI_83/XLXI_61 (DATA_ALU/XLXI_83/XLXN_99)
+     AND2:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_67/XLXI_2 (DATA_ALU/XLXI_83/XLXN_118)
+     AND2:I0->O            1   0.203   0.924  DATA_ALU/XLXI_83/XLXI_69/XLXI_3 (DATA_ALU/XLXI_83/XLXI_69/XLXN_17)
+     OR3:I1->O             3   0.223   1.015  DATA_ALU/XLXI_83/XLXI_69/XLXI_5 (DATA_ALU/XLXI_83/XLXN_174)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_97/XLXI_1 (DATA_ALU/XLXI_83/XLXN_150)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_96/XLXI_2 (DATA_ALU/XLXI_83/XLXI_96/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_96/XLXI_5 (DATA_ALU/XLXI_83/XLXN_189)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_116/XLXI_1 (DATA_ALU/XLXI_83/XLXN_187)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_111/XLXI_2 (DATA_ALU/XLXI_83/XLXI_111/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_111/XLXI_5 (DATA_ALU/XLXI_83/XLXN_249)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_119/XLXI_1 (DATA_ALU/XLXI_83/XLXN_390)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_164/XLXI_2 (DATA_ALU/XLXI_83/XLXI_164/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_164/XLXI_5 (DATA_ALU/XLXI_83/XLXN_401)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_165/XLXI_1 (DATA_ALU/XLXI_83/XLXN_400)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_179/XLXI_2 (DATA_ALU/XLXI_83/XLXI_179/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_179/XLXI_5 (DATA_ALU/XLXI_83/XLXN_418)
+     XOR3:I0->O            3   0.203   0.995  DATA_ALU/XLXI_83/XLXI_180/XLXI_1 (DATA_ALU/XLXI_83/XLXN_429)
+     XOR3:I1->O            2   0.223   0.961  DATA_ALU/XLXI_83/XLXI_213/XLXI_1 (DATA_ALU/XLXI_83/XLXN_1444)
+     XOR2:I1->O            1   0.223   0.580  DATA_ALU/XLXI_83/XLXI_219/XLXI_1 (DATA_ALU/XLXN_187<7>)
+     begin scope: 'DATA_ALU/XLXI_78/XLXI_8:D7'
+     LUT6:I5->O            1   0.205   0.000  Mmux_S2_D7_Mux_0_o_3 (Mmux_S2_D7_Mux_0_o_3)
+     MUXF7:I1->O           7   0.140   0.773  Mmux_S2_D7_Mux_0_o_2_f7 (O)
+     end scope: 'DATA_ALU/XLXI_78/XLXI_8:O'
+     BUF:I->O              1   0.568   0.579  DATA_ALU/XLXI_32 (alu_N)
+     FDE:D                     0.102          N_FLAG/XLXI_1
+    ----------------------------------------
+    Total                     28.458ns (6.825ns logic, 21.633ns route)
+                                       (24.0% logic, 76.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 453319 / 24
+-------------------------------------------------------------------------
+Offset:              31.210ns (Levels of Logic = 27)
+  Source:            PROGRAM_COUNTER/q_temp[3]_dff_2_3 (FF)
+  Destination:       ALU_RESULT<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: PROGRAM_COUNTER/q_temp[3]_dff_2_3 to ALU_RESULT<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             19   0.447   1.300  PROGRAM_COUNTER/q_temp[3]_dff_2_3 (PROGRAM_COUNTER/q_temp[3]_dff_2_3)
+     LUT4:I1->O           10   0.205   0.857  INSTRUCTION_PROM/INSTRUCTION_SELECT/Mram_o111 (INSTRUCTION_PROM/INSTRUCTION_SELECT/Mram_o1)
+     begin scope: 'REG_FILE/XLXI_7/XLXI_1:S1'
+     LUT6:I5->O            1   0.205   0.580  Mmux_O11 (O)
+     end scope: 'REG_FILE/XLXI_7/XLXI_1:O'
+     LUT6:I5->O           19   0.205   1.436  INPUT_SEL/Mmux_o11 (XLXN_73<0>)
+     AND2:I0->O            2   0.203   0.981  DATA_ALU/XLXI_83/XLXI_61 (DATA_ALU/XLXI_83/XLXN_99)
+     AND2:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_67/XLXI_2 (DATA_ALU/XLXI_83/XLXN_118)
+     AND2:I0->O            1   0.203   0.924  DATA_ALU/XLXI_83/XLXI_69/XLXI_3 (DATA_ALU/XLXI_83/XLXI_69/XLXN_17)
+     OR3:I1->O             3   0.223   1.015  DATA_ALU/XLXI_83/XLXI_69/XLXI_5 (DATA_ALU/XLXI_83/XLXN_174)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_97/XLXI_1 (DATA_ALU/XLXI_83/XLXN_150)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_96/XLXI_2 (DATA_ALU/XLXI_83/XLXI_96/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_96/XLXI_5 (DATA_ALU/XLXI_83/XLXN_189)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_116/XLXI_1 (DATA_ALU/XLXI_83/XLXN_187)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_111/XLXI_2 (DATA_ALU/XLXI_83/XLXI_111/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_111/XLXI_5 (DATA_ALU/XLXI_83/XLXN_249)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_119/XLXI_1 (DATA_ALU/XLXI_83/XLXN_390)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_164/XLXI_2 (DATA_ALU/XLXI_83/XLXI_164/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_164/XLXI_5 (DATA_ALU/XLXI_83/XLXN_401)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_165/XLXI_1 (DATA_ALU/XLXI_83/XLXN_400)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_179/XLXI_2 (DATA_ALU/XLXI_83/XLXI_179/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_179/XLXI_5 (DATA_ALU/XLXI_83/XLXN_418)
+     XOR3:I0->O            3   0.203   0.995  DATA_ALU/XLXI_83/XLXI_180/XLXI_1 (DATA_ALU/XLXI_83/XLXN_429)
+     XOR3:I1->O            2   0.223   0.961  DATA_ALU/XLXI_83/XLXI_213/XLXI_1 (DATA_ALU/XLXI_83/XLXN_1444)
+     XOR2:I1->O            1   0.223   0.580  DATA_ALU/XLXI_83/XLXI_219/XLXI_1 (DATA_ALU/XLXN_187<7>)
+     begin scope: 'DATA_ALU/XLXI_78/XLXI_8:D7'
+     LUT6:I5->O            1   0.205   0.000  Mmux_S2_D7_Mux_0_o_3 (Mmux_S2_D7_Mux_0_o_3)
+     MUXF7:I1->O           7   0.140   0.773  Mmux_S2_D7_Mux_0_o_2_f7 (O)
+     end scope: 'DATA_ALU/XLXI_78/XLXI_8:O'
+     OBUF:I->O                 2.571          ALU_RESULT_7_OBUF (ALU_RESULT<7>)
+    ----------------------------------------
+    Total                     31.210ns (8.363ns logic, 22.847ns route)
+                                       (26.8% logic, 73.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 16190 / 8
+-------------------------------------------------------------------------
+Delay:               29.780ns (Levels of Logic = 25)
+  Source:            Input<0> (PAD)
+  Destination:       ALU_RESULT<7> (PAD)
+
+  Data Path: Input<0> to ALU_RESULT<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.944  Input_0_IBUF (Input_0_IBUF)
+     LUT6:I0->O           19   0.203   1.436  INPUT_SEL/Mmux_o11 (XLXN_73<0>)
+     AND2:I0->O            2   0.203   0.981  DATA_ALU/XLXI_83/XLXI_61 (DATA_ALU/XLXI_83/XLXN_99)
+     AND2:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_67/XLXI_2 (DATA_ALU/XLXI_83/XLXN_118)
+     AND2:I0->O            1   0.203   0.924  DATA_ALU/XLXI_83/XLXI_69/XLXI_3 (DATA_ALU/XLXI_83/XLXI_69/XLXN_17)
+     OR3:I1->O             3   0.223   1.015  DATA_ALU/XLXI_83/XLXI_69/XLXI_5 (DATA_ALU/XLXI_83/XLXN_174)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_97/XLXI_1 (DATA_ALU/XLXI_83/XLXN_150)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_96/XLXI_2 (DATA_ALU/XLXI_83/XLXI_96/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_96/XLXI_5 (DATA_ALU/XLXI_83/XLXN_189)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_116/XLXI_1 (DATA_ALU/XLXI_83/XLXN_187)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_111/XLXI_2 (DATA_ALU/XLXI_83/XLXI_111/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_111/XLXI_5 (DATA_ALU/XLXI_83/XLXN_249)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_119/XLXI_1 (DATA_ALU/XLXI_83/XLXN_390)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_164/XLXI_2 (DATA_ALU/XLXI_83/XLXI_164/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_164/XLXI_5 (DATA_ALU/XLXI_83/XLXN_401)
+     XOR3:I0->O            3   0.203   1.015  DATA_ALU/XLXI_83/XLXI_165/XLXI_1 (DATA_ALU/XLXI_83/XLXN_400)
+     AND2:I0->O            1   0.203   0.827  DATA_ALU/XLXI_83/XLXI_179/XLXI_2 (DATA_ALU/XLXI_83/XLXI_179/XLXN_16)
+     OR3:I2->O             3   0.320   1.015  DATA_ALU/XLXI_83/XLXI_179/XLXI_5 (DATA_ALU/XLXI_83/XLXN_418)
+     XOR3:I0->O            3   0.203   0.995  DATA_ALU/XLXI_83/XLXI_180/XLXI_1 (DATA_ALU/XLXI_83/XLXN_429)
+     XOR3:I1->O            2   0.223   0.961  DATA_ALU/XLXI_83/XLXI_213/XLXI_1 (DATA_ALU/XLXI_83/XLXN_1444)
+     XOR2:I1->O            1   0.223   0.580  DATA_ALU/XLXI_83/XLXI_219/XLXI_1 (DATA_ALU/XLXN_187<7>)
+     begin scope: 'DATA_ALU/XLXI_78/XLXI_8:D7'
+     LUT6:I5->O            1   0.205   0.000  Mmux_S2_D7_Mux_0_o_3 (Mmux_S2_D7_Mux_0_o_3)
+     MUXF7:I1->O           7   0.140   0.773  Mmux_S2_D7_Mux_0_o_2_f7 (O)
+     end scope: 'DATA_ALU/XLXI_78/XLXI_8:O'
+     OBUF:I->O                 2.571          ALU_RESULT_7_OBUF (ALU_RESULT<7>)
+    ----------------------------------------
+    Total                     29.780ns (8.726ns logic, 21.054ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   29.888|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 4.30 secs
+ 
+--> 
+
+
+Total memory usage is 504460 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
