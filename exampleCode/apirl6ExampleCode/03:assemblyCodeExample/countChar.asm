@@ -72,7 +72,7 @@ main:
       ;
       mov r8, userInputBuff
       xor r9, r9
-      mov r9b, [indexBuff] ;puts the addy of index buff into r9b reg which is the lower 8 bits of the r8 register 
+      mov r9b, [indexBuff + 3] ;puts the addy of index buff into r9b reg which is the lower 8 bits of the r8 register 
       sub r9b, 48  ;converts the ascii stored an actual number     
       add r8, r9   ;to get this to work without segfaulting you need to do the above       
       mov al, [r8]
