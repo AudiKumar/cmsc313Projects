@@ -16,6 +16,7 @@
 msg:          db    "Enter string you want to split: ", 10
 msgLen:       equ   $ - msg
 
+startIndex:   db    "8", 10
 
 sen1:         db    "Here is your string unedited: ", 10
 sen1Len:      equ   $ - sen1
@@ -29,8 +30,9 @@ newline:      db    10
 
   
         section .bss
-sIn      resb  16
+sIn           resb  16
 indexBuff     resb  2
+testBuff      resb  16 
 
         section .text
         global main
@@ -81,6 +83,40 @@ main:
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;This is where the string manipluation goes
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      mov r8, sIn
+      
+      ;stores the begining of the sIn to the r10 reg
+      xor r10, r10
+      mov r10, [r8]
+      
+      ;increments to the split index
+      add r8, 8 
+
+      ;stores the end of the sIn to the r9 reg along with the new line
+      xor r9, r9
+      mov r9, [r8]
+      
+      ;points r8 back to the start of the sIn
+      mov r8, sIn
+      ;mov r10, [r8]
+      
+      ;puts the back of the sIn in the front
+      mov [r8], r9
+      mov [sIn], r9
+      
+      ;increments to the newline
+      add r8, 7
+
+      ;puts the front in the back overwriting the \n
+      ;mov r10, [r8]
+      
+      ;puts everything into the 
+      ;mov [sIn], r9
+      mov [r8], r10
+
+           
+
+
 
 
       ;this code forces the executable file to go to the newline even if the reserve is the buffer has been used
