@@ -31,6 +31,9 @@ erLen:        equ $ - errorRead
 
 splitChoice:  db    "s", 0
 sLen:         equ $ - splitChoice
+splitPrompt:  db    "Enter the split value: ", 0 
+splitError1:   db    "The split value had to be less than message length. Current message length is = ", 0
+
  
 jump:         db    "j", 0
 jLen:         equ $ - jump
@@ -39,8 +42,9 @@ quit:         db    "q", 0
 qLen:         equ $ - quit
 
 
-newline:      db    10
+newline:      db    10, 0
 fmt:          db "%s", 0
+intfmt:       db "%d", 0
 nullTerminator: db   0
 
 
@@ -48,6 +52,9 @@ nullTerminator: db   0
 choice      resb 2
 string      resb 256 
 readInput   resb 256 
+testBuff    resb 1
+sIndex      resb 8
+lengthBuff  resb 8
 
         section .text
         global main
@@ -101,7 +108,7 @@ while:
 
       ;if (choice == split): start the split subroutine
       cmp al, [splitChoice]      
-
+      je splitOption
 
       ;if (choice == jump): start the jump split subroutne
       cmp al, [jump]
@@ -115,14 +122,8 @@ while:
       ;starts the loop over again
       JNE main
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; loop explained in psedocode       
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; r9 = counter (which starts at 0)
-; r10 = the len of og msg 
-; while ( counter < len(ogMsg) ):
-;     buffer += ogMsg[counter]
-;     counter++
+
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -194,43 +195,51 @@ displayOption:
 ;           the last char is the newline or enter ascii character)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 readOption: 
-
-      ;outputs the readPrompt
       push rbp
-      mov rdi, fmt
-      mov rsi, readPrompt
-      mov rax, 0
-      call printf
-      pop rbp
-
-      ; uses scanf to put the user's choice into the readInput
-      push rbp
-      mov rdi, fmt
-      mov rsi, readInput
-      mov rax, 0
-      call scanf
-      pop rbp
       
+      ;outputs the read prompt
+      mov rax, 1
+      mov rdi, 1
+      mov rsi, readPrompt
+      mov rdx, RPLen
+      syscall
+      
+      ; gets the readinput in 
+      mov rax, 0
+      mov rdi, 0
+      mov rsi, readInput
+      mov rdx, 256
+      syscall
+  
+      ; stores the addy of the first index into r12
+      mov r12, readInput
+
 
       ;stores the begining of the read input (will also be used for looping)
-      mov r8, readInput
+      mov al, [readInput] 
+      mov [testBuff], al
 
-      ;stores the first char in the read input into the 1st parameter for the
-      ;validate subrountine. dil = 1 btye version of rsi 
-      mov dil, [readInput]
+      ; if this does work use testBuff
+      mov rdi, [testBuff]
       
+      ;counter 
+      mov r13, 0
       
-      ;jmp validateInput
-      ;setup for getting the last char
-      mov r11, [nullTerminator]
-      jmp getLastChar
+      jmp getLastChar 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;getLastChar():
+;decription:
+;            loops through the readInput until the newline char is there and
+;            once there is 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;      
 getLastChar:
       ;checks to see if the current index is the null terminator 
-      cmp r8, r11 
+      cmp al, [newline]
       JE setupValidate
-
-      inc r8
+      add r12, 1 
+      mov al, [r12]
+      add r13, 1
       jmp getLastChar
 
       
@@ -244,13 +253,112 @@ getLastChar:
 setupValidate:
 
       ;decrements the pointer of the readInput 
-      dec r8
+      mov r12, readInput
+      sub r13, 1 
+      add r12, r13
+      ;goes to the real last char and stores it in rsi
+      mov al, [r12]
+      mov [testBuff], al
+      mov rsi, [testBuff]
+
       
-      ;stores the last char in the read input into the 2nd parameter for the 
-      ;validate subroutine. sil = 1 byte version of rsi 
-      mov sil, [r8]
+
+      pop rbp 
+
+      ;now you should call validate fn  
 
 
+splitOption:
+      ;this code forces the executable file to go to the newline even if the reserve is the buffer has been used
+      mov rax, 1
+      mov rdi, 1
+      mov rsi, newline
+      mov rdx, 1
+      syscall
+
+
+      ;outputs the splitPrompt
+      push rbp
+      mov rdi, fmt
+      mov rsi, splitPrompt
+      mov rax, 0
+      call printf
+      pop rbp
+
+      ;puts the index into the sIndex 
+      push rbp
+      mov rdi, intfmt
+      mov rsi, sIndex
+      mov rax, 0
+      call scanf
+      pop rbp
+      
+      mov r13, 0
+      mov r12, string
+      mov al, [string]
+
+      jmp getLenOfString
+
+getLenOfString: 
+      cmp al, [nullTerminator]
+      je checkSIndex
+      add r12, 1
+      mov al, [r12]
+      add r13, 1
+      jmp getLenOfString
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;checkSIndex():
+;description: 
+;             checks to see if r13 (len of string) >= sIndex and if false then
+;             the error msg for split will be outputted and the code will loop
+;             back into the splitOption. Otherwise it'll go to splitSetup label
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+checkSIndex:
+
+      ; checks to see if the the 
+      sub r13, 1
+      cmp r13, [sIndex]
+      JAE setupSplit
+      
+
+      ; outputs the error message
+      push rbp
+      mov rdi, fmt
+      mov rsi, splitError1
+      mov rax, 0
+      call printf
+      pop rbp
+
+      push rbp
+      mov rdi, intfmt
+      mov rsi, r13
+      mov rax, 0
+      call printf
+      pop rbp
+      
+      push rbp
+      mov rdi, fmt
+      mov rsi, newline
+      mov rax, 0
+      call printf
+      pop rbp
+
+      ;loops back and asks for the splt index again
+      jmp splitOption
+
+setupSplit:
+      mov rdi, string
+      mov rsi, r13 
+      mov rdx, [sIndex]
+      jmp testLabel
+      ;call split
+
+
+;label to help with debugging      
+testLabel:
+      cmp rax, rax
+      jmp exit       
 
 ;exit for the code
 exit:

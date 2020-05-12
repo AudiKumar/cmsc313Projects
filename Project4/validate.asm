@@ -39,3 +39,47 @@
 ;       else: notValidInput
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+section .text
+global validate
+
+validate:
+      jmp firstCharCheck1
+
+firstCharCheck1:
+      cmp rdi, 65
+      JAE firstCharCheck2
+      mov rax, 0
+      jmp endSubrountine 
+
+firstCharCheck2:
+      cmp rdi, 90
+      JBE lastCharCheck1
+      mov rax, 0
+      jmp endSubrountine
+
+
+lastCharCheck1:
+      cmp rsi, 46 
+      JE  correct
+      jmp lastCharCheck2
+      
+
+lastCharCheck2:
+      cmp rsi, 33
+      JE  correct
+      jmp lastCharCheck2
+
+
+lastCharCheck3:
+      cmp rsi, 63
+      JE  correct
+      mov rax, 0
+      jmp endSubrountine
+
+correct:
+        mov rax, 1
+        jmp endSubrountine
+
+endSubrountine:
+      ret 
+    
