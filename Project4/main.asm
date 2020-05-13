@@ -5,7 +5,7 @@
 ;              this is the main assembly file that calls the sub rountines
         extern printf
         extern scanf
-
+        extern validate
 
 
         section .data
@@ -63,58 +63,50 @@ lengthBuff  resb 8
 
 main:
 
-
+      push rbp 
       jmp copyOgMSGIntoBuffer      
 
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;while(): 
+;     This is the main menu loop, shoud it have been named something else? Yeah.
+;     Am I going to change it no. This whole label shows all of your options and
+;     lets you choose what to do.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 while:
-      
-      ;this code forces the executable file to go to the newline even if the reserve is the buffer has been used
+      ;outputs menu options
       mov rax, 1
       mov rdi, 1
       mov rsi, newline
       mov rdx, 1
       syscall
 
-      ;uses printf to say give the menu options and the prompt for the option
-      push rbp
       mov rdi, fmt
       mov rsi, menuMessage
       mov rax, 0
       call printf
-      pop rbp
 
-      ; uses scanf to put the user's choice into scanf
-      push rbp
       mov rdi, fmt
       mov rsi, choice
       mov rax, 0
       call scanf
-      pop rbp
       
-      ;stores the choice letter in the al register 
+      ;checks the user's choice and goes the the correct path accordingly if the
+      ;input is not valid then it will just loop back up again
       mov al, [choice] 
 
-
-      ;if (choice == display): display the message
       cmp al, [display]      
       je displayOption      
 
-      ;if (choice == read): enter a new option
       cmp al, [read]
       je readOption
       
-
-      ;if (choice == split): start the split subroutine
       cmp al, [splitChoice]      
       je splitOption
 
-      ;if (choice == jump): start the jump split subroutne
       cmp al, [jump]
 
 
-      ;if(choice == quit): exit program 
       cmp al, [quit]
       JE exit
 
@@ -126,14 +118,14 @@ while:
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;copyOgMSGIntoBuffer()  
-;description:   
-;             contains all of the declarations, that will be used in the loop
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;     contains all of the declarations, that will be used in the loop
+;copyLoop()
+;     goes through the og msg and puts it into the string buffer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 copyOgMSGIntoBuffer:
       
-      ;r8 ==> counter = 0;
       mov r8, msg
       mov r9, 0
       mov r10, msgLen
@@ -141,21 +133,13 @@ copyOgMSGIntoBuffer:
 
       jmp copyLoop
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;copyLoop()  
-;description:   
-;             this is where the looping will happen for putting the og msg into
-;             the string buffer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 copyLoop:
 
       ;if counter == msgLen: then start the menu option loop
       cmp r9, r10     
       JE while
 
-      ;else put the current char into the buffer
-      
+      ;else put the current char into the buffer 
       ; goes through the og msg and copys it char by char (the char is stored in AL)
       mov r8, msg 
       add r8, r9 
@@ -167,35 +151,39 @@ copyLoop:
       jmp copyLoop
         
       
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;displayOption():
-;decription:
-;            subrountine that will display the current message, this will call
-;            printf and go back to the the while loop
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;     subrountine that will display the current message, this will call printf 
+;     and go back to the the while loop
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 displayOption:
       
-      push rbp
       mov rdi, fmt
       mov rsi, string
       mov rax, 0
       call printf
-      pop rbp
+
+
+      mov rdi, fmt
+      mov rsi, newline
+      mov rax, 0
+      call printf
 
       jmp while
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;readOption():
-;decription:
-;           subrountine that will read in a new input, but before it overwrites
-;           the string buffer the input is validated. Validation means that the
-;           first char is an upper case letter, and the 2nd to last char (b/c
-;           the last char is the newline or enter ascii character)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;     subrountine that will read in a new input, but before it overwrites the 
+;     string buffer the input is validated. Validation means that the first char 
+;     is an upper case letter, and the 2nd to last char (b/c the last char is 
+;     the newline or enter ascii character)
+; 
+;getLastChar():
+;     loops unitl the newline of the readinput is reached.      
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 readOption: 
-      push rbp
       
       ;outputs the read prompt
       mov rax, 1
@@ -227,12 +215,6 @@ readOption:
       
       jmp getLastChar 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;getLastChar():
-;decription:
-;            loops through the readInput until the newline char is there and
-;            once there is 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;      
 getLastChar:
       ;checks to see if the current index is the null terminator 
       cmp al, [newline]
@@ -244,12 +226,12 @@ getLastChar:
 
       
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;setupValidate()  
-;description:   
-;             puts of the the stuff in the proper registers for the validate
-;             subroutine 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;     puts of the the stuff in the proper registers for the validate subroutine 
+;     if it returns 1 then you need to start the whole process of putting in 
+;     the readInput into the string buffer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 setupValidate:
 
       ;decrements the pointer of the readInput 
@@ -261,15 +243,72 @@ setupValidate:
       mov [testBuff], al
       mov rsi, [testBuff]
 
-      
+      call validate
 
-      pop rbp 
+      cmp rax, 1
+      JE clearStringSetup
+
+      mov rdi, fmt
+      mov rsi, errorRead
+      mov rax, 0
+      call printf
+            
+      
+      
+      jmp while
 
       ;now you should call validate fn  
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;clearStringSetup() and clearString(): 
+;     these two labels will bassically clear the string buffer and is used if 
+;     validate returns a 1
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+clearStringSetup:
+      ;I know this is not needed but it makes my case easier to make sense of
+      mov r8, string
+      mov al, [string]
+      mov bl, [nullTerminator]
 
+clearString:
+      cmp al, [nullTerminator]
+      JE readInNewMsgSetup
 
+      cmp al, [newline]
+      JE readInNewMsgSetup
+      
+      mov [r8], bl
+      add r8, 1
+      mov al, [r8]
+      jmp clearString 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;readInNewMsgSetup() and readInNewMsg: 
+;     these two sublabels overwrites the string buffer with the valid input
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+readInNewMsgSetup:
+      mov r8, readInput
+      mov r9, string
+      mov al, [readInput]
+
+readInNewMsg:
+      cmp al, [newline]
+      JE while
+
+      mov [r9], al
+      add r8, 1
+      mov al, [r8]
+      add r9, 1
+
+      jmp readInNewMsg
+     
+    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; splitOption() and getLenOfString()
+;     prints out the split index options and also gets the len of the string for
+;     the error msg 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 splitOption:
-      ;this code forces the executable file to go to the newline even if the reserve is the buffer has been used
+      
       mov rax, 1
       mov rdi, 1
       mov rsi, newline
@@ -278,20 +317,16 @@ splitOption:
 
 
       ;outputs the splitPrompt
-      push rbp
       mov rdi, fmt
       mov rsi, splitPrompt
       mov rax, 0
       call printf
-      pop rbp
 
       ;puts the index into the sIndex 
-      push rbp
       mov rdi, intfmt
       mov rsi, sIndex
       mov rax, 0
       call scanf
-      pop rbp
       
       mov r13, 0
       mov r12, string
@@ -308,12 +343,14 @@ getLenOfString:
       jmp getLenOfString
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;checkSIndex():
-;description: 
-;             checks to see if r13 (len of string) >= sIndex and if false then
-;             the error msg for split will be outputted and the code will loop
-;             back into the splitOption. Otherwise it'll go to splitSetup label
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; checkSIndex():
+;     checks to see if r13 (len of string) >= sIndex and if false then the 
+;     error msg for split will be outputted and the code will loop back 
+;     into the splitOption. Otherwise it'll go to splitSetup label
+;
+; setupSplit():
+;     will setup the registers for the split subrountine
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
 checkSIndex:
 
       ; checks to see if the the 
@@ -323,26 +360,20 @@ checkSIndex:
       
 
       ; outputs the error message
-      push rbp
       mov rdi, fmt
       mov rsi, splitError1
       mov rax, 0
       call printf
-      pop rbp
 
-      push rbp
       mov rdi, intfmt
       mov rsi, r13
       mov rax, 0
       call printf
-      pop rbp
       
-      push rbp
       mov rdi, fmt
       mov rsi, newline
       mov rax, 0
       call printf
-      pop rbp
 
       ;loops back and asks for the splt index again
       jmp splitOption
@@ -357,11 +388,16 @@ setupSplit:
 
 ;label to help with debugging      
 testLabel:
-      cmp rax, rax
+      
+      ;mov rdi, fmt
+      ;mov rsi, string
+      ;mov rax, 0
+      ;call printf
       jmp exit       
 
 ;exit for the code
 exit:
+      pop rbp 
       mov rax, 90
       xor rdi, rdi 
-      syscall  
+      syscall 

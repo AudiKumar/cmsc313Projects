@@ -67,7 +67,7 @@ lastCharCheck1:
 lastCharCheck2:
       cmp rsi, 33
       JE  correct
-      jmp lastCharCheck2
+      jmp lastCharCheck3
 
 
 lastCharCheck3:
