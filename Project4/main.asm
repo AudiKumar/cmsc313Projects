@@ -6,8 +6,9 @@
         extern printf
         extern scanf
         extern validate
-
-
+        extern split
+        extern square      
+        extern jump
         section .data
 
 ; lol screw 80 columns
@@ -35,11 +36,16 @@ splitPrompt:  db    "Enter the split value: ", 0
 splitError1:   db    "The split value had to be less than message length. Current message length is = ", 0
 
  
-jump:         db    "j", 0
-jLen:         equ $ - jump
+jumpChoice:   db    "j", 0
+jLen:         equ $ - jumpChoice
 
 quit:         db    "q", 0 
 qLen:         equ $ - quit
+
+jumpPrompt:   db "Enter jump interval between 2 and ", 0
+jumpPrompt2:  db "-> ", 0
+minJumpVal:   db 2
+
 
 
 newline:      db    10, 0
@@ -55,7 +61,7 @@ readInput   resb 256
 testBuff    resb 1
 sIndex      resb 8
 lengthBuff  resb 8
-
+jumpIndexBuff    resb 8
         section .text
         global main
 
@@ -104,7 +110,8 @@ while:
       cmp al, [splitChoice]      
       je splitOption
 
-      cmp al, [jump]
+      cmp al, [jumpChoice]
+      je jumpOption
 
 
       cmp al, [quit]
@@ -351,7 +358,7 @@ getLenOfString:
 ; setupSplit():
 ;     will setup the registers for the split subrountine
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
-checkSIndex:
+checkSIndex:      
 
       ; checks to see if the the 
       sub r13, 1
@@ -382,18 +389,116 @@ setupSplit:
       mov rdi, string
       mov rsi, r13 
       mov rdx, [sIndex]
-      jmp testLabel
-      ;call split
+      mov rcx, r13
+      ;mov r8, r13 
+      ;mov r9, [sIndex]
+      ;jmp testLabel
+      call split
+      
+      jmp while
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; jumpOption(), getLenOfStringForSquare(), callSquare()
+;     gets the length of the string calls string and also calls the square c 
+;     subrountine for the jump interval propmpt
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+jumpOption:
+
+      mov r13, 0
+      mov r12, string
+      mov al, [string]
+      
+      jmp getLenOfStringForSquare
+      
+
+getLenOfStringForSquare:
+      cmp al, [nullTerminator]
+      je  callSquare
+      add r12, 1
+      mov al, [r12]
+      add r13, 1
+      jmp getLenOfStringForSquare
+
+;calls sqaure 
+callSquare:
+      xor rax, rax
+      ;sub r13, 1  
+      mov rdi, r13
+      call square
+      
+      mov r14, rax
+      jmp checkJumpIndex 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; checkJumpIndex, checkJumpIndex2
+;     will repeatedly prompt the user for a number within the range of the jump
+;     interval
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+checkJumpIndex: 
+      
+      mov rdi, fmt
+      mov rsi, jumpPrompt
+      mov rax, 0
+      call printf
+
+      mov rdi, intfmt
+      mov rsi, r14
+      mov rax, 0
+      call printf
+
+
+      mov rdi, fmt
+      mov rsi, jumpPrompt2
+      mov rax, 0
+      call printf
+
+      mov rdi, intfmt
+      mov rsi, jumpIndexBuff 
+      mov rax, 0
+      call scanf      
+
+      mov rdi, fmt
+      mov rsi, newline
+      mov rax, 0
+      call printf      
+     
+
+      xor r8, r8 
+      mov r8, [jumpIndexBuff]
+      xor r9, r9
+      add r9, 2      
+
+      ;jmp testLabel
+
+
+      
+      cmp r8, r9
+      JAE checkJumpIndex2
+      jmp checkJumpIndex
+
+checkJumpIndex2:
+      cmp r8, r14
+      JBE callJump
+      jmp checkJumpIndex
+
+callJump:
+
+      mov rdi, string 
+      mov rsi, [jumpIndexBuff]
+      mov rcx, r13 ; length of the string
+      call jump
+      jmp while
 
 
 ;label to help with debugging      
-testLabel:
-      
-      ;mov rdi, fmt
-      ;mov rsi, string
+;testLabel:
+ ;     cmp rax, rax
+      ;mov rdi, intfmt
+      ;mov rsi, rax
       ;mov rax, 0
       ;call printf
-      jmp exit       
+      ;jmp exit       
 
 ;exit for the code
 exit:
@@ -401,3 +506,4 @@ exit:
       mov rax, 90
       xor rdi, rdi 
       syscall 
+

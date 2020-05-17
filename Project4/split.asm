@@ -1,33 +1,56 @@
 ; Name: Aditya Krishna Yerraguntla Kumar
-; File: split.asm
+; File: jump.asm
 ; Date: May 1 
 ; Description:
-;              this is where the split encrypt subroutine will happen
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; PSEUDOCODE ALGO 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  
-
-
+;              this is where the jump subroutine will be.
 extern printf
-section .text
-global split
-
-
-
-;takes three parameters
-; rdi = the string s
-; rsi = the true length of the string
-; rdx = index where you split
-split:
-      ; r8 stores the start of the string
-      mov r8, rdi      
-
-      ; the true length is stored if rsi
-      mov [sLenBuff], rsi 
+extern scanf
+;extern main
+        section .text
+        global jump
+jump:
+      mov r10, rdi
+      mov r11, rsi
+      mov r12, rcx
       
-      ; the index where you are spliting
-      mov [indexBuff], rdx
+      mov r13, rdi
+      mov r14, 0 ;counter 1
+      mov r15, 0 ;counter 2
+      jmp loop1      
 
-      ; r9 will go to the split index
-      mov r9, r8
+
+loop1:
+      cmp r14, r11
+      JE nestedLoop 
+     
+      ;mov rax, 1
+      ;mov rdi, 1
+      ;mov rsi, r13
+      ;mov rdx, 1
+      ;syscall
+ 
+      add r14, 1
+      add r15, 1
+      jmp loop1
+
+nestedLoop:
+      cmp r15, r12
+      JE endJumpSubrountine
+
+      mov rax, 1
+      mov rdi, 1
+      mov rsi, r13
+      mov rdx, 1
+      syscall
+
+
+      add r13, r14
+      add r15, 1
+      jmp nestedLoop
+
+ 
+
+endJumpSubrountine:
+      mov rax, 1
+      ret  
 
